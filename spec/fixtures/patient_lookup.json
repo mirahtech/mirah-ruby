@@ -1,0 +1,11 @@
+{
+    "data": {
+        "patient": {
+            "id": "3046af39-0560-4add-9881-2e004ecdb042",
+            "givenName": "James",
+            "familyName": "Smith",
+            "birthDate": "1991-01-01"
+        }
+    }
+}
+

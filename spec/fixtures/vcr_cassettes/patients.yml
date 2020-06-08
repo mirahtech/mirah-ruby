@@ -1,0 +1,247 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/integration_api/graphql
+    body:
+      encoding: UTF-8
+      string: '{"query":"query Mirah__Graphql__Queries__PatientQuery($first: Int,
+        $last: Int, $after: String, $before: String, $externalId: [String!], $search:
+        String) {\n  patients(first: $first, after: $after, before: $before, last:
+        $last, externalId: $externalId, search: $search) {\n    nodes {\n      ...Mirah__Graphql__Fragments__PatientFragment\n    }\n    pageInfo
+        {\n      ...Mirah__Graphql__Fragments__PageInfoFragment\n    }\n  }\n}\n\nfragment
+        Mirah__Graphql__Fragments__PatientFragment on Patient {\n  id\n  externalId\n  givenName\n  familyName\n  birthDate\n  gender\n  primaryLanguage\n  email\n  phoneNumber\n  identifier
+        {\n    value\n  }\n}\n\nfragment Mirah__Graphql__Fragments__PageInfoFragment
+        on PageInfo {\n  hasNextPage\n  hasPreviousPage\n  startCursor\n  endCursor\n}","variables":{"first":100},"operationName":"Mirah__Graphql__Queries__PatientQuery"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Api-User-Id:
+      - "<API_USER_ID>"
+      Api-Key:
+      - "<API_TOKEN>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d64ecf0c3e917504346c6369d37e37ef"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d2ea6eb0-0294-4d34-a7f3-ae704362cc09
+      X-Runtime:
+      - '0.045006'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"patients":{"nodes":[{"id":"4ce75082-845f-469d-8ac2-8ecd1b147f60","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"aa"}]},{"id":"f7bc46ed-cb8e-4b37-8ab8-9dc87d858528","externalId":"bb","givenName":"Brian","familyName":"Blessed","birthDate":"1938-01-20","gender":"MALE","primaryLanguage":null,"email":"example+brian@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"bb"}]},{"id":"3554902f-bf49-4ca0-a49e-8427021957ef","externalId":"cc","givenName":"Charlotte","familyName":"Cutler","birthDate":"2001-07-02","gender":"FEMALE","primaryLanguage":null,"email":"example+charlotte@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"cc"}]}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"Mw"}}}}'
+  recorded_at: Sun, 07 Jun 2020 17:45:06 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/integration_api/graphql
+    body:
+      encoding: UTF-8
+      string: '{"query":"query Mirah__Graphql__Queries__PatientQuery($first: Int,
+        $last: Int, $after: String, $before: String, $externalId: [String!], $search:
+        String) {\n  patients(first: $first, after: $after, before: $before, last:
+        $last, externalId: $externalId, search: $search) {\n    nodes {\n      ...Mirah__Graphql__Fragments__PatientFragment\n    }\n    pageInfo
+        {\n      ...Mirah__Graphql__Fragments__PageInfoFragment\n    }\n  }\n}\n\nfragment
+        Mirah__Graphql__Fragments__PatientFragment on Patient {\n  id\n  externalId\n  givenName\n  familyName\n  birthDate\n  gender\n  primaryLanguage\n  email\n  phoneNumber\n  identifier
+        {\n    value\n  }\n}\n\nfragment Mirah__Graphql__Fragments__PageInfoFragment
+        on PageInfo {\n  hasNextPage\n  hasPreviousPage\n  startCursor\n  endCursor\n}","variables":{"externalId":["aa"],"search":"Andrew","first":100},"operationName":"Mirah__Graphql__Queries__PatientQuery"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Api-User-Id:
+      - "<API_USER_ID>"
+      Api-Key:
+      - "<API_TOKEN>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"17837120c726a4e0319485005aef41c5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f799e0f0-cdc1-485f-b3b2-e70df362ebb0
+      X-Runtime:
+      - '0.042908'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"patients":{"nodes":[{"id":"4ce75082-845f-469d-8ac2-8ecd1b147f60","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"aa"}]}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"MQ"}}}}'
+  recorded_at: Sun, 07 Jun 2020 17:45:06 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/integration_api/graphql
+    body:
+      encoding: UTF-8
+      string: '{"query":"query Mirah__Graphql__Queries__PatientExternalIdQuery($externalId:
+        String!) {\n  patientExternal(externalId: $externalId) {\n    ...Mirah__Graphql__Fragments__PatientFragment\n  }\n}\n\nfragment
+        Mirah__Graphql__Fragments__PatientFragment on Patient {\n  id\n  externalId\n  givenName\n  familyName\n  birthDate\n  gender\n  primaryLanguage\n  email\n  phoneNumber\n  identifier
+        {\n    value\n  }\n}","variables":{"externalId":"aa"},"operationName":"Mirah__Graphql__Queries__PatientExternalIdQuery"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Api-User-Id:
+      - "<API_USER_ID>"
+      Api-Key:
+      - "<API_TOKEN>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"099f0aaa029406dca00f0507e48a5669"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b8a1d4bd-f3a4-4956-9ede-e3a6711dfb71
+      X-Runtime:
+      - '0.037212'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"patientExternal":{"id":"4ce75082-845f-469d-8ac2-8ecd1b147f60","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"aa"}]}}}'
+  recorded_at: Sun, 07 Jun 2020 17:45:06 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/integration_api/graphql
+    body:
+      encoding: UTF-8
+      string: '{"query":"query Mirah__Graphql__Queries__PatientIdQuery($id: ID!) {\n  patient(id:
+        $id) {\n    ...Mirah__Graphql__Fragments__PatientFragment\n  }\n}\n\nfragment
+        Mirah__Graphql__Fragments__PatientFragment on Patient {\n  id\n  externalId\n  givenName\n  familyName\n  birthDate\n  gender\n  primaryLanguage\n  email\n  phoneNumber\n  identifier
+        {\n    value\n  }\n}","variables":{"id":"4ce75082-845f-469d-8ac2-8ecd1b147f60"},"operationName":"Mirah__Graphql__Queries__PatientIdQuery"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Api-User-Id:
+      - "<API_USER_ID>"
+      Api-Key:
+      - "<API_TOKEN>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c446aa37c6f57f1ba89b2ab802e4c785"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 00f975c8-dbef-49ce-b25d-9813cbc0faa2
+      X-Runtime:
+      - '0.040454'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"patient":{"id":"4ce75082-845f-469d-8ac2-8ecd1b147f60","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"aa"}]}}}'
+  recorded_at: Sun, 07 Jun 2020 17:45:06 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/integration_api/graphql
+    body:
+      encoding: UTF-8
+      string: '{"query":"mutation Mirah__Graphql__Mutations__CreateOrUpdatePatientMutation($input:
+        CreateOrUpdatePatientInput!) {\n  createOrUpdatePatient(input: $input) {\n    status\n    errors
+        {\n      path\n      message\n    }\n    result {\n      ...Mirah__Graphql__Fragments__PatientFragment\n    }\n  }\n}\n\nfragment
+        Mirah__Graphql__Fragments__PatientFragment on Patient {\n  id\n  externalId\n  givenName\n  familyName\n  birthDate\n  gender\n  primaryLanguage\n  email\n  phoneNumber\n  identifier
+        {\n    value\n  }\n}","variables":{"input":{"externalId":"tt","givenName":"Tim","familyName":"Thomas","birthDate":"2000-01-01","gender":"MALE","email":"tim@mirah.com","phoneNumber":"555-555-5555"}},"operationName":"Mirah__Graphql__Mutations__CreateOrUpdatePatientMutation"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/json
+      Api-User-Id:
+      - "<API_USER_ID>"
+      Api-Key:
+      - "<API_TOKEN>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - ALLOWALL
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"22bc8dad38508519020c855eedabfc97"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 41bc58a1-27f8-4b36-b350-29f084a3bb4c
+      X-Runtime:
+      - '0.094747'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"createOrUpdatePatient":{"status":"CREATED","errors":[],"result":{"id":"f36f7db4-b9de-412a-90bc-999b713f4d01","externalId":"tt","givenName":"Tim","familyName":"Thomas","birthDate":"2000-01-01","gender":"MALE","primaryLanguage":null,"email":"tim@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"tt"}]}}}}'
+  recorded_at: Sun, 07 Jun 2020 17:45:06 GMT
+recorded_with: VCR 6.0.0

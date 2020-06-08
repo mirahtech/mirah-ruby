@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'yaml'
+
+config = YAML.load_file('.rubocop.yml')
+
+# Check if the file is excluded from all cops
+exclude_file = lambda do |file|
+  config['AllCops']['Exclude'].any? do |pattern|
+    File.fnmatch(pattern, file, File::FNM_PATHNAME)
+  end
+end
+
+files = `git diff --name-only --diff-filter=ACMR --ignore-submodules=all --staged`
+        .split(/\n/)
+        .reject(&exclude_file)
+
+if files.empty?
+  puts 'There is nothing staged to correct!'
+  exit
+end
+
+system({ 'BUNDLE_GEMFILE' => '.overcommit_gems.rb' },
+       "bundle exec rubocop --auto-correct --config=.rubocop.yml #{files.join(' ')}")
+
+puts
+puts 'Corrections applied. Review unstaged changes and apply any required manual corrections.'

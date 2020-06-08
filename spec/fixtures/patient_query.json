@@ -1,0 +1,27 @@
+{
+    "data": {
+        "patients": {
+            "nodes": [
+                {
+                    "id": "3046af39-0560-4add-9881-2e004ecdb042",
+                    "givenName": "James",
+                    "familyName": "Smith",
+                    "birthDate": "1991-01-01"
+                },
+                {
+                    "id": "56df31cb-8a3f-4bc3-a62f-b77163892e9b",
+                    "givenName": "Steve",
+                    "familyName": "Jones",
+                    "birthDate": "1989-04-02"
+                }
+            ],
+            "pageInfo": {
+                "hasNextPage": false,
+                "hasPreviousPage": false,
+                "startCursor": "MQ",
+                "endCursor": "MzM"
+            }
+        }
+    }
+}
+
