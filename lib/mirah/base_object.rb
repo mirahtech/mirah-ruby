@@ -36,7 +36,7 @@ module Mirah
     end
 
     # @private
-    def self.attribute(name, serializer: Serializers::ScalarSerializer, target: name, path: nil)
+    def self.attribute(name, serializer: Serializers::ScalarSerializer.new, target: name, path: nil)
       attributes.push(
         {
           name: name,

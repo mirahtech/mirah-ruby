@@ -5,9 +5,9 @@ RSpec.describe Mirah::BaseInputObject do
     Class.new(Mirah::BaseInputObject) do
       input :test_string, required: true
 
-      input :test_date, serializer: Mirah::Serializers::DateSerializer, required: false
+      input :test_date, serializer: Mirah::Serializers::DateSerializer.new, required: false
 
-      input :test_date_time, serializer: Mirah::Serializers::DateTimeSerializer, required: false
+      input :test_date_time, serializer: Mirah::Serializers::DateTimeSerializer.new, required: false
     end
   end
 

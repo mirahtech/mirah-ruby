@@ -52,7 +52,7 @@ module Mirah
     end
 
     # @private
-    def self.input(name, required:, serializer: Serializers::ScalarSerializer)
+    def self.input(name, required:, serializer: Serializers::ScalarSerializer.new)
       inputs.push(
         { name: name,
           serializer: serializer,

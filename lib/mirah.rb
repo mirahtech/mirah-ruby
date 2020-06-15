@@ -16,6 +16,9 @@ require 'mirah/collection'
 require 'mirah/push_result'
 require 'mirah/graphql'
 
+# Invitation is used by appointment and so needs to be loaded first.
+require 'mirah/data/invitation'
+
 Dir[File.dirname(__FILE__) + '/mirah/data/**/*.rb'].sort.each do |file|
   require file
 end

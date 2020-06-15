@@ -37,21 +37,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"34580cceaf6455c8c2645fb68f70cc50"
+      - W/"563ff461ebe437bc83e34e8bc2b77839"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9375db05-3c9a-4a9e-9698-ee1a9cb0cdbf
+      - 532ef153-e439-4f74-b667-095cd6ac1319
       X-Runtime:
-      - '0.050398'
+      - '0.082759'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"practitioners":{"nodes":[{"id":"f21d47f6-9999-4ae1-869e-56df6bf735ec","externalId":"house","givenName":"Greg","familyName":"House","title":"Dr","suffix":"MD","email":"example+house@mirah.com","defaultPractitionerRole":"CLINICIAN","ssoUsername":"example+house@mirah.com","identifier":[{"value":"house"}],"organizations":[{"id":"7160a629-95de-4088-9900-bd72a507b833","externalId":"hospital"}]},{"id":"29512645-7ec0-448c-b557-a56d8e6ea6cd","externalId":"scully","givenName":"Dana","familyName":"Scully","title":"Dr","suffix":"MD","email":"example+scully@mirah.com","defaultPractitionerRole":"CLINICIAN","ssoUsername":"example+scully@mirah.com","identifier":[{"value":"scully"}],"organizations":[{"id":"839643ef-b906-4a3c-9d35-a13ec3def8f3","externalId":"acute"}]}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"Mg"}}}}'
-  recorded_at: Sun, 07 Jun 2020 17:45:07 GMT
+      string: '{"data":{"practitioners":{"nodes":[{"id":"fa89645f-ef56-4de1-9d3b-00e3fe10d80f","externalId":"house","givenName":"Greg","familyName":"House","title":"Dr","suffix":"MD","email":"example+house@mirah.com","defaultPractitionerRole":"CLINICIAN","ssoUsername":"example+house@mirah.com","identifier":[{"value":"house"}],"organizations":[{"id":"9345bd5e-55f7-480a-9bc8-f37270cacbeb","externalId":"hospital"}]},{"id":"fb150cb2-be18-4aef-8768-1e02d363b898","externalId":"scully","givenName":"Dana","familyName":"Scully","title":"Dr","suffix":"MD","email":"example+scully@mirah.com","defaultPractitionerRole":"CLINICIAN","ssoUsername":"example+scully@mirah.com","identifier":[{"value":"scully"}],"organizations":[{"id":"f0190622-db4c-4273-b745-d699fc60b2e6","externalId":"acute"}]}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"Mg"}}}}'
+  recorded_at: Mon, 15 Jun 2020 19:22:41 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -89,21 +89,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"26e8babef5cb41ce06a13aea195e9938"
+      - W/"32c48242855a647524c5ec60ce7bbe9a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9ea3052a-ec03-44d7-88bf-e80e7c16d942
+      - f4eaf5a2-099d-43e0-a174-48829d9f839b
       X-Runtime:
-      - '0.043991'
+      - '0.061156'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"practitioners":{"nodes":[{"id":"f21d47f6-9999-4ae1-869e-56df6bf735ec","externalId":"house","givenName":"Greg","familyName":"House","title":"Dr","suffix":"MD","email":"example+house@mirah.com","defaultPractitionerRole":"CLINICIAN","ssoUsername":"example+house@mirah.com","identifier":[{"value":"house"}],"organizations":[{"id":"7160a629-95de-4088-9900-bd72a507b833","externalId":"hospital"}]}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"MQ"}}}}'
-  recorded_at: Sun, 07 Jun 2020 17:45:07 GMT
+      string: '{"data":{"practitioners":{"nodes":[{"id":"fa89645f-ef56-4de1-9d3b-00e3fe10d80f","externalId":"house","givenName":"Greg","familyName":"House","title":"Dr","suffix":"MD","email":"example+house@mirah.com","defaultPractitionerRole":"CLINICIAN","ssoUsername":"example+house@mirah.com","identifier":[{"value":"house"}],"organizations":[{"id":"9345bd5e-55f7-480a-9bc8-f37270cacbeb","externalId":"hospital"}]}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"MQ"}}}}'
+  recorded_at: Mon, 15 Jun 2020 19:22:42 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -136,21 +136,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"3b4ac86c08d28ba040d1c85f5d746d6b"
+      - W/"24c86d5ad2dd6e514f73ee4b8c860713"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4362ba2f-35c6-405d-ab57-72439369144d
+      - 528b0e97-7d36-4e61-b7a8-7d7140676a7f
       X-Runtime:
-      - '0.038110'
+      - '0.048140'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"practitionerExternal":{"id":"f21d47f6-9999-4ae1-869e-56df6bf735ec","externalId":"house","givenName":"Greg","familyName":"House","title":"Dr","suffix":"MD","email":"example+house@mirah.com","defaultPractitionerRole":"CLINICIAN","ssoUsername":"example+house@mirah.com","identifier":[{"value":"house"}],"organizations":[{"id":"7160a629-95de-4088-9900-bd72a507b833","externalId":"hospital"}]}}}'
-  recorded_at: Sun, 07 Jun 2020 17:45:07 GMT
+      string: '{"data":{"practitionerExternal":{"id":"fa89645f-ef56-4de1-9d3b-00e3fe10d80f","externalId":"house","givenName":"Greg","familyName":"House","title":"Dr","suffix":"MD","email":"example+house@mirah.com","defaultPractitionerRole":"CLINICIAN","ssoUsername":"example+house@mirah.com","identifier":[{"value":"house"}],"organizations":[{"id":"9345bd5e-55f7-480a-9bc8-f37270cacbeb","externalId":"hospital"}]}}}'
+  recorded_at: Mon, 15 Jun 2020 19:22:42 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -159,7 +159,7 @@ http_interactions:
       string: '{"query":"query Mirah__Graphql__Queries__PractitionerIdQuery($id: ID!)
         {\n  practitioner(id: $id) {\n    ...Mirah__Graphql__Fragments__PractitionerFragment\n  }\n}\n\nfragment
         Mirah__Graphql__Fragments__PractitionerFragment on Practitioner {\n  id\n  externalId\n  givenName\n  familyName\n  title\n  suffix\n  email\n  defaultPractitionerRole\n  ssoUsername\n  identifier
-        {\n    value\n  }\n  organizations {\n    id\n    externalId\n  }\n}","variables":{"id":"f21d47f6-9999-4ae1-869e-56df6bf735ec"},"operationName":"Mirah__Graphql__Queries__PractitionerIdQuery"}'
+        {\n    value\n  }\n  organizations {\n    id\n    externalId\n  }\n}","variables":{"id":"fa89645f-ef56-4de1-9d3b-00e3fe10d80f"},"operationName":"Mirah__Graphql__Queries__PractitionerIdQuery"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -183,21 +183,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"7ae1d9f51b22a07e96166f48e19a77b0"
+      - W/"37f9d7a7a3d7df7462caf9ecccc6b6ce"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 720b2da5-2705-49f2-b895-305d7435fcf9
+      - e6878174-27e6-4667-97b2-2c90a4ff7fbe
       X-Runtime:
-      - '0.040134'
+      - '0.052052'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"practitioner":{"id":"f21d47f6-9999-4ae1-869e-56df6bf735ec","externalId":"house","givenName":"Greg","familyName":"House","title":"Dr","suffix":"MD","email":"example+house@mirah.com","defaultPractitionerRole":"CLINICIAN","ssoUsername":"example+house@mirah.com","identifier":[{"value":"house"}],"organizations":[{"id":"7160a629-95de-4088-9900-bd72a507b833","externalId":"hospital"}]}}}'
-  recorded_at: Sun, 07 Jun 2020 17:45:07 GMT
+      string: '{"data":{"practitioner":{"id":"fa89645f-ef56-4de1-9d3b-00e3fe10d80f","externalId":"house","givenName":"Greg","familyName":"House","title":"Dr","suffix":"MD","email":"example+house@mirah.com","defaultPractitionerRole":"CLINICIAN","ssoUsername":"example+house@mirah.com","identifier":[{"value":"house"}],"organizations":[{"id":"9345bd5e-55f7-480a-9bc8-f37270cacbeb","externalId":"hospital"}]}}}'
+  recorded_at: Mon, 15 Jun 2020 19:22:42 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -232,19 +232,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"1d4419efdb2fff8583063aaf0b6c476e"
+      - W/"cade746360d3a86cc6fe59b43e9fccf4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 116f32ce-3f72-479c-9d9d-3984ad9a120b
+      - 1efc3858-654a-44cb-8f26-eeb370d1e7f1
       X-Runtime:
-      - '0.086123'
+      - '0.148022'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"createOrUpdatePractitioner":{"status":"CREATED","errors":[],"result":{"id":"390a3bfd-db9a-4948-90b6-57300af042cf","externalId":"drzoidberg","givenName":"John","familyName":"Zoiberg","title":"Dr","suffix":"MD","email":"zoidberg@mirah.com","defaultPractitionerRole":"CLINICIAN","ssoUsername":"drzoidberg","identifier":[{"value":"drzoidberg"}],"organizations":[{"id":"7160a629-95de-4088-9900-bd72a507b833","externalId":"hospital"}]}}}}'
-  recorded_at: Sun, 07 Jun 2020 17:45:07 GMT
+      string: '{"data":{"createOrUpdatePractitioner":{"status":"CREATED","errors":[],"result":{"id":"d69161fd-5ec9-4ef8-b1de-02299484cc39","externalId":"drzoidberg","givenName":"John","familyName":"Zoiberg","title":"Dr","suffix":"MD","email":"zoidberg@mirah.com","defaultPractitionerRole":"CLINICIAN","ssoUsername":"drzoidberg","identifier":[{"value":"drzoidberg"}],"organizations":[{"id":"9345bd5e-55f7-480a-9bc8-f37270cacbeb","externalId":"hospital"}]}}}}'
+  recorded_at: Mon, 15 Jun 2020 19:22:42 GMT
 recorded_with: VCR 6.0.0

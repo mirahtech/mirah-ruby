@@ -10,11 +10,11 @@ module Mirah
 
       # @!attribute [r] start_date
       #   @return (see Mirah::Data::Appointment#start_date)
-      input :start_date, required: false, serializer: Serializers::DateTimeSerializer
+      input :start_date, required: false, serializer: Serializers::DateTimeSerializer.new
 
       # @!attribute [r] end_date
       #   @return (see Mirah::Data::Appointment#end_date)
-      input :end_date, required: false, serializer: Serializers::DateTimeSerializer
+      input :end_date, required: false, serializer: Serializers::DateTimeSerializer.new
 
       # @!attribute [r] minutes_duration
       #   @return (see Mirah::Data::Appointment#minutes_duration)

@@ -23,7 +23,7 @@ module Mirah
 
       # @!attribute [r] birth_date
       #   @return [Date] The patient's date of birth.
-      attribute :birth_date, serializer: Serializers::DateSerializer
+      attribute :birth_date, serializer: Serializers::DateSerializer.new
 
       # @!attribute [r] gender
       #   @return [string] The patient's gender

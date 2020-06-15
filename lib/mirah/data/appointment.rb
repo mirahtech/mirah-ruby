@@ -23,11 +23,11 @@ module Mirah
 
       # @!attribute [r] start_date
       #   @return [Date] The appointment start date
-      attribute :start_date, serializer: Serializers::DateTimeSerializer
+      attribute :start_date, serializer: Serializers::DateTimeSerializer.new
 
       # @!attribute [r] end_date
       #   @return [Date] The appointment end date
-      attribute :end_date, serializer: Serializers::DateTimeSerializer
+      attribute :end_date, serializer: Serializers::DateTimeSerializer.new
 
       # @!attribute [r] minutes_duration
       #   @return [Integer] The legnth of this appointment in minutes
@@ -60,6 +60,11 @@ module Mirah
       # @!attribute [r] external_organization_id
       #   @return [string] Your system identifier for the organization this appointment is with
       attribute :external_organization_id, path: %w[organization], target: 'externalId'
+
+      # @!attribute [r] invitations
+      #   @return [Array<Invitation>] An array of invitations for measurements associated with this appointment.
+      attribute :invitations, path: %w[measurementEncounter], target: 'measurementInvitations',
+                              serializer: Serializers::NestedObjectSerializer.new(Invitation)
     end
   end
 end
