@@ -37,23 +37,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"626460444ab19defbbae707af12827cb"
+      - W/"cfbcf77b10b389d23e228f8d49907bd3"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6a177e5f-004c-4b80-82f3-448a13fb375d
+      - 30445404-bd5e-442e-8f32-6a03f0a94a46
       X-Runtime:
-      - '0.075895'
+      - '0.044307'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"organizations":{"nodes":[{"id":"9345bd5e-55f7-480a-9bc8-f37270cacbeb","externalId":"hospital","name":"Test
-        Hospital","identifier":[{"value":"hospital"}],"partOf":null},{"id":"f0190622-db4c-4273-b745-d699fc60b2e6","externalId":"acute","name":"Acute
-        Unit","identifier":[{"value":"acute"}],"partOf":{"id":"9345bd5e-55f7-480a-9bc8-f37270cacbeb","externalId":"hospital"}}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"Mg"}}}}'
-  recorded_at: Mon, 15 Jun 2020 19:22:41 GMT
+      string: '{"data":{"organizations":{"nodes":[{"id":"7ffed136-72f9-4753-979c-aef9b509e8c6","externalId":"hospital","name":"Test
+        Hospital","identifier":[{"value":"hospital"}],"partOf":null},{"id":"e2ccad0d-f1bd-4db6-b192-25166080894f","externalId":"acute","name":"Acute
+        Unit","identifier":[{"value":"acute"}],"partOf":{"id":"7ffed136-72f9-4753-979c-aef9b509e8c6","externalId":"hospital"}}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"Mg"}}}}'
+  recorded_at: Mon, 15 Jun 2020 20:37:26 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -92,22 +92,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"4e96e7fdc7a30baeaff85cbf6a864ff8"
+      - W/"d97a8620da673a364fc724920f9a00e5"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5c0dc4ce-214d-418c-bb43-d7ad90ea8198
+      - 477eb453-bd53-4934-b24f-fef7ce5f5a24
       X-Runtime:
-      - '0.060851'
+      - '0.059906'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"organizations":{"nodes":[{"id":"9345bd5e-55f7-480a-9bc8-f37270cacbeb","externalId":"hospital","name":"Test
+      string: '{"data":{"organizations":{"nodes":[{"id":"7ffed136-72f9-4753-979c-aef9b509e8c6","externalId":"hospital","name":"Test
         Hospital","identifier":[{"value":"hospital"}],"partOf":null}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"MQ"}}}}'
-  recorded_at: Mon, 15 Jun 2020 19:22:41 GMT
+  recorded_at: Mon, 15 Jun 2020 20:37:26 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -140,22 +140,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ebb04042c272a69c6e6bd4e3b5c6a648"
+      - W/"5542a0be98b1ac28ed0c82f4c5f7dc16"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a84630d6-e1c9-4dad-83ca-6456214f0806
+      - e656b00f-c63d-487f-85e0-de51ea0cfa6c
       X-Runtime:
-      - '0.041567'
+      - '0.037754'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"organizationExternal":{"id":"9345bd5e-55f7-480a-9bc8-f37270cacbeb","externalId":"hospital","name":"Test
+      string: '{"data":{"organizationExternal":{"id":"7ffed136-72f9-4753-979c-aef9b509e8c6","externalId":"hospital","name":"Test
         Hospital","identifier":[{"value":"hospital"}],"partOf":null}}}'
-  recorded_at: Mon, 15 Jun 2020 19:22:41 GMT
+  recorded_at: Mon, 15 Jun 2020 20:37:26 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -164,7 +164,7 @@ http_interactions:
       string: '{"query":"query Mirah__Graphql__Queries__OrganizationIdQuery($id: ID!)
         {\n  organization(id: $id) {\n    ...Mirah__Graphql__Fragments__OrganizationFragment\n  }\n}\n\nfragment
         Mirah__Graphql__Fragments__OrganizationFragment on Organization {\n  id\n  externalId\n  name\n  identifier
-        {\n    value\n  }\n  partOf {\n    id\n    externalId\n  }\n}","variables":{"id":"9345bd5e-55f7-480a-9bc8-f37270cacbeb"},"operationName":"Mirah__Graphql__Queries__OrganizationIdQuery"}'
+        {\n    value\n  }\n  partOf {\n    id\n    externalId\n  }\n}","variables":{"id":"7ffed136-72f9-4753-979c-aef9b509e8c6"},"operationName":"Mirah__Graphql__Queries__OrganizationIdQuery"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -188,22 +188,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"562c94a92b1d80e08b43207fb790dbb8"
+      - W/"1de7835c86857e82a9a975eca264a960"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - eb99be78-660a-4bbf-a25f-15039030a75c
+      - 91af1829-45aa-48c4-8e2b-44c9cd2795f5
       X-Runtime:
-      - '0.047643'
+      - '0.035167'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"organization":{"id":"9345bd5e-55f7-480a-9bc8-f37270cacbeb","externalId":"hospital","name":"Test
+      string: '{"data":{"organization":{"id":"7ffed136-72f9-4753-979c-aef9b509e8c6","externalId":"hospital","name":"Test
         Hospital","identifier":[{"value":"hospital"}],"partOf":null}}}'
-  recorded_at: Mon, 15 Jun 2020 19:22:41 GMT
+  recorded_at: Mon, 15 Jun 2020 20:37:26 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -239,20 +239,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"457d6629fb59adf873f8822db576c448"
+      - W/"5f47a75dee577e1bef2768a5fd7e3210"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 38a38dcc-50a2-49f4-b737-f71ca9fdcfb3
+      - 5ec551ed-43b6-4262-b3c5-6fe2bb5cb06d
       X-Runtime:
-      - '0.093866'
+      - '0.062323'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"createOrUpdateOrganization":{"status":"CREATED","errors":[],"result":{"id":"05a75400-f7b2-456b-ba91-ca630166986a","externalId":"outpatient","name":"Outpatient
-        Therapy","identifier":[{"value":"outpatient"}],"partOf":{"id":"9345bd5e-55f7-480a-9bc8-f37270cacbeb","externalId":"hospital"}}}}}'
-  recorded_at: Mon, 15 Jun 2020 19:22:41 GMT
+      string: '{"data":{"createOrUpdateOrganization":{"status":"CREATED","errors":[],"result":{"id":"617fae61-a164-4d01-9492-2f56cf1a6367","externalId":"outpatient","name":"Outpatient
+        Therapy","identifier":[{"value":"outpatient"}],"partOf":{"id":"7ffed136-72f9-4753-979c-aef9b509e8c6","externalId":"hospital"}}}}}'
+  recorded_at: Mon, 15 Jun 2020 20:37:27 GMT
 recorded_with: VCR 6.0.0

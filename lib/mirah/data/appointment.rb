@@ -61,10 +61,19 @@ module Mirah
       #   @return [string] Your system identifier for the organization this appointment is with
       attribute :external_organization_id, path: %w[organization], target: 'externalId'
 
+      # @!attribute [r] encounter_id
+      #   @return [string] The internal mirah id of the patient
+      attribute :encounter_id, path: %w[measurementEncounter], target: 'id'
+
       # @!attribute [r] invitations
       #   @return [Array<Invitation>] An array of invitations for measurements associated with this appointment.
       attribute :invitations, path: %w[measurementEncounter], target: 'measurementInvitations',
                               serializer: Serializers::NestedObjectSerializer.new(Invitation)
+
+      # Whether this appointment has a Mirah measurement encounter associated with it.
+      def measured?
+        !!encounter_id
+      end
     end
   end
 end

@@ -91,6 +91,7 @@ module Mirah
             externalId
           }
           measurementEncounter {
+            id
             measurementInvitations {
               id
               phase
