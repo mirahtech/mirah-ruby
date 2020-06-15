@@ -74,8 +74,6 @@ module Mirah
         else
           @subclass.from_graphql_hash(value)
         end
-      rescue StandardError
-        nil
       end
     end
   end
