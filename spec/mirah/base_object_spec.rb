@@ -5,9 +5,9 @@ RSpec.describe Mirah::BaseObject do
     Class.new(Mirah::BaseObject) do
       attribute :test_string
 
-      attribute :test_date, serializer: Mirah::Serializers::DateSerializer
+      attribute :test_date, serializer: Mirah::Serializers::DateSerializer.new
 
-      attribute :test_date_time, serializer: Mirah::Serializers::DateTimeSerializer
+      attribute :test_date_time, serializer: Mirah::Serializers::DateTimeSerializer.new
 
       attribute :test_nested, path: %w[subobject], target: 'nested'
 

@@ -36,21 +36,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"d64ecf0c3e917504346c6369d37e37ef"
+      - W/"89d18661a755b3a899bfedc32fc10377"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d2ea6eb0-0294-4d34-a7f3-ae704362cc09
+      - e91fcfc9-ed0d-4f53-a300-eb3f715cff6b
       X-Runtime:
-      - '0.045006'
+      - '0.048117'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"patients":{"nodes":[{"id":"4ce75082-845f-469d-8ac2-8ecd1b147f60","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"aa"}]},{"id":"f7bc46ed-cb8e-4b37-8ab8-9dc87d858528","externalId":"bb","givenName":"Brian","familyName":"Blessed","birthDate":"1938-01-20","gender":"MALE","primaryLanguage":null,"email":"example+brian@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"bb"}]},{"id":"3554902f-bf49-4ca0-a49e-8427021957ef","externalId":"cc","givenName":"Charlotte","familyName":"Cutler","birthDate":"2001-07-02","gender":"FEMALE","primaryLanguage":null,"email":"example+charlotte@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"cc"}]}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"Mw"}}}}'
-  recorded_at: Sun, 07 Jun 2020 17:45:06 GMT
+      string: '{"data":{"patients":{"nodes":[{"id":"4a6b42c6-3708-41de-b2a1-481bc7e1e2a2","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"aa"}]},{"id":"58ade641-e747-4245-8b32-9de2a3baeaa9","externalId":"bb","givenName":"Brian","familyName":"Blessed","birthDate":"1938-01-20","gender":"MALE","primaryLanguage":null,"email":"example+brian@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"bb"}]},{"id":"bc713061-e998-4235-9a87-33be832ada5d","externalId":"cc","givenName":"Charlotte","familyName":"Cutler","birthDate":"2001-07-02","gender":"FEMALE","primaryLanguage":null,"email":"example+charlotte@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"cc"}]}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"Mw"}}}}'
+  recorded_at: Mon, 15 Jun 2020 20:37:26 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -87,21 +87,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"17837120c726a4e0319485005aef41c5"
+      - W/"f54d911728e210787bf22d1b6ff29209"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f799e0f0-cdc1-485f-b3b2-e70df362ebb0
+      - 987ba95c-7cdd-49cf-a06b-24f0a7232af6
       X-Runtime:
-      - '0.042908'
+      - '0.053835'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"patients":{"nodes":[{"id":"4ce75082-845f-469d-8ac2-8ecd1b147f60","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"aa"}]}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"MQ"}}}}'
-  recorded_at: Sun, 07 Jun 2020 17:45:06 GMT
+      string: '{"data":{"patients":{"nodes":[{"id":"4a6b42c6-3708-41de-b2a1-481bc7e1e2a2","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"aa"}]}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"MQ"}}}}'
+  recorded_at: Mon, 15 Jun 2020 20:37:26 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -134,21 +134,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"099f0aaa029406dca00f0507e48a5669"
+      - W/"6a5ced72699c7ca7a59e1422c4e59538"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b8a1d4bd-f3a4-4956-9ede-e3a6711dfb71
+      - b8adc60f-e234-4374-9691-b8e6deb371e7
       X-Runtime:
-      - '0.037212'
+      - '0.053846'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"patientExternal":{"id":"4ce75082-845f-469d-8ac2-8ecd1b147f60","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"aa"}]}}}'
-  recorded_at: Sun, 07 Jun 2020 17:45:06 GMT
+      string: '{"data":{"patientExternal":{"id":"4a6b42c6-3708-41de-b2a1-481bc7e1e2a2","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"aa"}]}}}'
+  recorded_at: Mon, 15 Jun 2020 20:37:26 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -157,7 +157,7 @@ http_interactions:
       string: '{"query":"query Mirah__Graphql__Queries__PatientIdQuery($id: ID!) {\n  patient(id:
         $id) {\n    ...Mirah__Graphql__Fragments__PatientFragment\n  }\n}\n\nfragment
         Mirah__Graphql__Fragments__PatientFragment on Patient {\n  id\n  externalId\n  givenName\n  familyName\n  birthDate\n  gender\n  primaryLanguage\n  email\n  phoneNumber\n  identifier
-        {\n    value\n  }\n}","variables":{"id":"4ce75082-845f-469d-8ac2-8ecd1b147f60"},"operationName":"Mirah__Graphql__Queries__PatientIdQuery"}'
+        {\n    value\n  }\n}","variables":{"id":"4a6b42c6-3708-41de-b2a1-481bc7e1e2a2"},"operationName":"Mirah__Graphql__Queries__PatientIdQuery"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -181,21 +181,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c446aa37c6f57f1ba89b2ab802e4c785"
+      - W/"69e1ccb754f4f67265de1655889ffba3"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 00f975c8-dbef-49ce-b25d-9813cbc0faa2
+      - a3be637c-3486-40ae-b586-4caf4c6db771
       X-Runtime:
-      - '0.040454'
+      - '0.036230'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"patient":{"id":"4ce75082-845f-469d-8ac2-8ecd1b147f60","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"aa"}]}}}'
-  recorded_at: Sun, 07 Jun 2020 17:45:06 GMT
+      string: '{"data":{"patient":{"id":"4a6b42c6-3708-41de-b2a1-481bc7e1e2a2","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"aa"}]}}}'
+  recorded_at: Mon, 15 Jun 2020 20:37:26 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -229,19 +229,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"22bc8dad38508519020c855eedabfc97"
+      - W/"8d9d85e9ebff59350c99cf372ac03ef8"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 41bc58a1-27f8-4b36-b350-29f084a3bb4c
+      - f37ec178-2c6a-4e64-8463-8d059f9452e1
       X-Runtime:
-      - '0.094747'
+      - '0.157038'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"createOrUpdatePatient":{"status":"CREATED","errors":[],"result":{"id":"f36f7db4-b9de-412a-90bc-999b713f4d01","externalId":"tt","givenName":"Tim","familyName":"Thomas","birthDate":"2000-01-01","gender":"MALE","primaryLanguage":null,"email":"tim@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"tt"}]}}}}'
-  recorded_at: Sun, 07 Jun 2020 17:45:06 GMT
+      string: '{"data":{"createOrUpdatePatient":{"status":"CREATED","errors":[],"result":{"id":"8bdafcea-b10d-46f1-b3f9-3925917edf09","externalId":"tt","givenName":"Tim","familyName":"Thomas","birthDate":"2000-01-01","gender":"MALE","primaryLanguage":null,"email":"tim@mirah.com","phoneNumber":"555-555-5555","identifier":[{"value":"tt"}]}}}}'
+  recorded_at: Mon, 15 Jun 2020 20:37:26 GMT
 recorded_with: VCR 6.0.0

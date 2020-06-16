@@ -13,7 +13,8 @@ http_interactions:
         {\n      ...Mirah__Graphql__Fragments__PageInfoFragment\n    }\n  }\n}\n\nfragment
         Mirah__Graphql__Fragments__AppointmentFragment on Appointment {\n  id\n  externalId\n  startDate\n  endDate\n  minutesDuration\n  status\n  patient
         {\n    id\n    externalId\n  }\n  organization {\n    id\n    externalId\n  }\n  organization
-        {\n    id\n    externalId\n  }\n  practitioner {\n    id\n    externalId\n  }\n}\n\nfragment
+        {\n    id\n    externalId\n  }\n  practitioner {\n    id\n    externalId\n  }\n  measurementEncounter
+        {\n    id\n    measurementInvitations {\n      id\n      phase\n      status\n      notificationStatus\n      lastNotificationDate\n    }\n  }\n}\n\nfragment
         Mirah__Graphql__Fragments__PageInfoFragment on PageInfo {\n  hasNextPage\n  hasPreviousPage\n  startCursor\n  endCursor\n}","variables":{"first":100},"operationName":"Mirah__Graphql__Queries__AppointmentQuery"}'
     headers:
       Accept-Encoding:
@@ -38,21 +39,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"71283055d34771dfa045d04750cfb498"
+      - W/"e7b1337b310228fa145f67149e423323"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ec0caed8-650a-475f-9bbd-72f944270711
+      - 395663b6-52a0-45af-b307-36ddd7db6e5a
       X-Runtime:
-      - '0.050702'
+      - '0.049663'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"appointments":{"nodes":[{"id":"27700a6a-d483-4f42-9ab3-7bfc15e9f307","externalId":"appt1","startDate":"2020-06-07T08:00:00Z","endDate":"2020-06-07T09:00:00Z","minutesDuration":60,"status":"FULFILLED","patient":{"id":"4ce75082-845f-469d-8ac2-8ecd1b147f60","externalId":"aa"},"organization":null,"practitioner":{"id":"f21d47f6-9999-4ae1-869e-56df6bf735ec","externalId":"house"}},{"id":"7e3fe346-fc10-4d26-8b71-22f18b728242","externalId":"appt2","startDate":"2020-06-14T08:00:00Z","endDate":"2020-06-14T09:00:00Z","minutesDuration":60,"status":"BOOKED","patient":{"id":"4ce75082-845f-469d-8ac2-8ecd1b147f60","externalId":"aa"},"organization":null,"practitioner":{"id":"f21d47f6-9999-4ae1-869e-56df6bf735ec","externalId":"house"}}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"Mg"}}}}'
-  recorded_at: Sun, 07 Jun 2020 17:45:07 GMT
+      string: '{"data":{"appointments":{"nodes":[{"id":"92b7ed8e-2533-424d-bd87-49d95f37e37c","externalId":"appt1","startDate":"2020-06-07T08:00:00Z","endDate":"2020-06-07T09:00:00Z","minutesDuration":60,"status":"FULFILLED","patient":{"id":"4a6b42c6-3708-41de-b2a1-481bc7e1e2a2","externalId":"aa"},"organization":null,"practitioner":{"id":"2229c7fb-fc5f-4b1a-969b-22609a13f648","externalId":"house"},"measurementEncounter":null},{"id":"39d5d153-e9dd-4a6f-8ffe-669483ca53ef","externalId":"appt2","startDate":"2020-06-14T08:00:00Z","endDate":"2020-06-14T09:00:00Z","minutesDuration":60,"status":"BOOKED","patient":{"id":"4a6b42c6-3708-41de-b2a1-481bc7e1e2a2","externalId":"aa"},"organization":null,"practitioner":{"id":"2229c7fb-fc5f-4b1a-969b-22609a13f648","externalId":"house"},"measurementEncounter":null}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"Mg"}}}}'
+  recorded_at: Mon, 15 Jun 2020 20:37:27 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -66,7 +67,8 @@ http_interactions:
         {\n      ...Mirah__Graphql__Fragments__PageInfoFragment\n    }\n  }\n}\n\nfragment
         Mirah__Graphql__Fragments__AppointmentFragment on Appointment {\n  id\n  externalId\n  startDate\n  endDate\n  minutesDuration\n  status\n  patient
         {\n    id\n    externalId\n  }\n  organization {\n    id\n    externalId\n  }\n  organization
-        {\n    id\n    externalId\n  }\n  practitioner {\n    id\n    externalId\n  }\n}\n\nfragment
+        {\n    id\n    externalId\n  }\n  practitioner {\n    id\n    externalId\n  }\n  measurementEncounter
+        {\n    id\n    measurementInvitations {\n      id\n      phase\n      status\n      notificationStatus\n      lastNotificationDate\n    }\n  }\n}\n\nfragment
         Mirah__Graphql__Fragments__PageInfoFragment on PageInfo {\n  hasNextPage\n  hasPreviousPage\n  startCursor\n  endCursor\n}","variables":{"externalId":["appt1"],"status":["FULFILLED"],"first":100},"operationName":"Mirah__Graphql__Queries__AppointmentQuery"}'
     headers:
       Accept-Encoding:
@@ -91,21 +93,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c8137e982ee7c6f5be39e9e3333a8532"
+      - W/"40946e603bcb509153d665e632841729"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 15790344-8d36-4003-8263-ad8e3f4afb9e
+      - 1d7dae70-6089-47e4-9f14-1ea0bb279415
       X-Runtime:
-      - '0.044071'
+      - '0.052069'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"appointments":{"nodes":[{"id":"27700a6a-d483-4f42-9ab3-7bfc15e9f307","externalId":"appt1","startDate":"2020-06-07T08:00:00Z","endDate":"2020-06-07T09:00:00Z","minutesDuration":60,"status":"FULFILLED","patient":{"id":"4ce75082-845f-469d-8ac2-8ecd1b147f60","externalId":"aa"},"organization":null,"practitioner":{"id":"f21d47f6-9999-4ae1-869e-56df6bf735ec","externalId":"house"}}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"MQ"}}}}'
-  recorded_at: Sun, 07 Jun 2020 17:45:07 GMT
+      string: '{"data":{"appointments":{"nodes":[{"id":"92b7ed8e-2533-424d-bd87-49d95f37e37c","externalId":"appt1","startDate":"2020-06-07T08:00:00Z","endDate":"2020-06-07T09:00:00Z","minutesDuration":60,"status":"FULFILLED","patient":{"id":"4a6b42c6-3708-41de-b2a1-481bc7e1e2a2","externalId":"aa"},"organization":null,"practitioner":{"id":"2229c7fb-fc5f-4b1a-969b-22609a13f648","externalId":"house"},"measurementEncounter":null}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"MQ"}}}}'
+  recorded_at: Mon, 15 Jun 2020 20:37:27 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -115,7 +117,8 @@ http_interactions:
         String!) {\n  appointmentExternal(externalId: $externalId) {\n    ...Mirah__Graphql__Fragments__AppointmentFragment\n  }\n}\n\nfragment
         Mirah__Graphql__Fragments__AppointmentFragment on Appointment {\n  id\n  externalId\n  startDate\n  endDate\n  minutesDuration\n  status\n  patient
         {\n    id\n    externalId\n  }\n  organization {\n    id\n    externalId\n  }\n  organization
-        {\n    id\n    externalId\n  }\n  practitioner {\n    id\n    externalId\n  }\n}","variables":{"externalId":"appt1"},"operationName":"Mirah__Graphql__Queries__AppointmentExternalIdQuery"}'
+        {\n    id\n    externalId\n  }\n  practitioner {\n    id\n    externalId\n  }\n  measurementEncounter
+        {\n    id\n    measurementInvitations {\n      id\n      phase\n      status\n      notificationStatus\n      lastNotificationDate\n    }\n  }\n}","variables":{"externalId":"appt1"},"operationName":"Mirah__Graphql__Queries__AppointmentExternalIdQuery"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -139,21 +142,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"5e62d65fb3a3ba3a66a895fa2acfaa62"
+      - W/"46b7c776b3db5928f3c5b24aa609a026"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f51f0dd9-5651-42ee-ab61-f7bb7530a66b
+      - d3d37715-f29a-49b0-948d-48137e5de198
       X-Runtime:
-      - '0.043280'
+      - '0.048185'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"appointmentExternal":{"id":"27700a6a-d483-4f42-9ab3-7bfc15e9f307","externalId":"appt1","startDate":"2020-06-07T08:00:00Z","endDate":"2020-06-07T09:00:00Z","minutesDuration":60,"status":"FULFILLED","patient":{"id":"4ce75082-845f-469d-8ac2-8ecd1b147f60","externalId":"aa"},"organization":null,"practitioner":{"id":"f21d47f6-9999-4ae1-869e-56df6bf735ec","externalId":"house"}}}}'
-  recorded_at: Sun, 07 Jun 2020 17:45:07 GMT
+      string: '{"data":{"appointmentExternal":{"id":"92b7ed8e-2533-424d-bd87-49d95f37e37c","externalId":"appt1","startDate":"2020-06-07T08:00:00Z","endDate":"2020-06-07T09:00:00Z","minutesDuration":60,"status":"FULFILLED","patient":{"id":"4a6b42c6-3708-41de-b2a1-481bc7e1e2a2","externalId":"aa"},"organization":null,"practitioner":{"id":"2229c7fb-fc5f-4b1a-969b-22609a13f648","externalId":"house"},"measurementEncounter":null}}}'
+  recorded_at: Mon, 15 Jun 2020 20:37:27 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -163,7 +166,8 @@ http_interactions:
         {\n  appointment(id: $id) {\n    ...Mirah__Graphql__Fragments__AppointmentFragment\n  }\n}\n\nfragment
         Mirah__Graphql__Fragments__AppointmentFragment on Appointment {\n  id\n  externalId\n  startDate\n  endDate\n  minutesDuration\n  status\n  patient
         {\n    id\n    externalId\n  }\n  organization {\n    id\n    externalId\n  }\n  organization
-        {\n    id\n    externalId\n  }\n  practitioner {\n    id\n    externalId\n  }\n}","variables":{"id":"27700a6a-d483-4f42-9ab3-7bfc15e9f307"},"operationName":"Mirah__Graphql__Queries__AppointmentIdQuery"}'
+        {\n    id\n    externalId\n  }\n  practitioner {\n    id\n    externalId\n  }\n  measurementEncounter
+        {\n    id\n    measurementInvitations {\n      id\n      phase\n      status\n      notificationStatus\n      lastNotificationDate\n    }\n  }\n}","variables":{"id":"92b7ed8e-2533-424d-bd87-49d95f37e37c"},"operationName":"Mirah__Graphql__Queries__AppointmentIdQuery"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -187,21 +191,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"cd2e38713ecc0e8e66d25cc923849dd9"
+      - W/"150eedaf8d5b861bb93596c0cf118337"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2ad1cbd0-a5fa-4d48-8083-d5a71d89478e
+      - 4873f78b-4457-4735-a6c8-51682293f885
       X-Runtime:
-      - '0.041415'
+      - '0.040602'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"appointment":{"id":"27700a6a-d483-4f42-9ab3-7bfc15e9f307","externalId":"appt1","startDate":"2020-06-07T08:00:00Z","endDate":"2020-06-07T09:00:00Z","minutesDuration":60,"status":"FULFILLED","patient":{"id":"4ce75082-845f-469d-8ac2-8ecd1b147f60","externalId":"aa"},"organization":null,"practitioner":{"id":"f21d47f6-9999-4ae1-869e-56df6bf735ec","externalId":"house"}}}}'
-  recorded_at: Sun, 07 Jun 2020 17:45:07 GMT
+      string: '{"data":{"appointment":{"id":"92b7ed8e-2533-424d-bd87-49d95f37e37c","externalId":"appt1","startDate":"2020-06-07T08:00:00Z","endDate":"2020-06-07T09:00:00Z","minutesDuration":60,"status":"FULFILLED","patient":{"id":"4a6b42c6-3708-41de-b2a1-481bc7e1e2a2","externalId":"aa"},"organization":null,"practitioner":{"id":"2229c7fb-fc5f-4b1a-969b-22609a13f648","externalId":"house"},"measurementEncounter":null}}}'
+  recorded_at: Mon, 15 Jun 2020 20:37:27 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -213,7 +217,8 @@ http_interactions:
         {\n      ...Mirah__Graphql__Fragments__AppointmentFragment\n    }\n  }\n}\n\nfragment
         Mirah__Graphql__Fragments__AppointmentFragment on Appointment {\n  id\n  externalId\n  startDate\n  endDate\n  minutesDuration\n  status\n  patient
         {\n    id\n    externalId\n  }\n  organization {\n    id\n    externalId\n  }\n  organization
-        {\n    id\n    externalId\n  }\n  practitioner {\n    id\n    externalId\n  }\n}","variables":{"input":{"externalId":"appt99","startDate":"2020-06-10T17:00:00+00:00","endDate":"2020-06-10T18:00:00+00:00","minutesDuration":60,"status":"BOOKED","externalPatientId":"cc","externalOrganizationId":"hospital","externalPractitionerId":"scully"}},"operationName":"Mirah__Graphql__Mutations__CreateOrUpdateAppointmentMutation"}'
+        {\n    id\n    externalId\n  }\n  practitioner {\n    id\n    externalId\n  }\n  measurementEncounter
+        {\n    id\n    measurementInvitations {\n      id\n      phase\n      status\n      notificationStatus\n      lastNotificationDate\n    }\n  }\n}","variables":{"input":{"externalId":"appt99","startDate":"2020-06-10T17:00:00+00:00","endDate":"2020-06-10T18:00:00+00:00","minutesDuration":60,"status":"BOOKED","externalPatientId":"cc","externalOrganizationId":"hospital","externalPractitionerId":"scully"}},"operationName":"Mirah__Graphql__Mutations__CreateOrUpdateAppointmentMutation"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -237,19 +242,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"006c3c0a95505c1f1a9f730aa4a4036e"
+      - W/"864a17808963295392a1462043936c90"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2a7ae18e-2ed9-4b22-a453-2987b8f1cca4
+      - c023dfa7-e912-40a2-85ec-633eef012500
       X-Runtime:
-      - '0.120749'
+      - '0.153152'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"createOrUpdateAppointment":{"status":"CREATED","errors":[],"result":{"id":"4affce57-fa6b-4cc3-85c8-748b014abf9c","externalId":"appt99","startDate":"2020-06-10T17:00:00Z","endDate":"2020-06-10T18:00:00Z","minutesDuration":60,"status":"BOOKED","patient":{"id":"3554902f-bf49-4ca0-a49e-8427021957ef","externalId":"cc"},"organization":{"id":"7160a629-95de-4088-9900-bd72a507b833","externalId":"hospital"},"practitioner":{"id":"29512645-7ec0-448c-b557-a56d8e6ea6cd","externalId":"scully"}}}}}'
-  recorded_at: Sun, 07 Jun 2020 17:45:07 GMT
+      string: '{"data":{"createOrUpdateAppointment":{"status":"CREATED","errors":[],"result":{"id":"2dd6f7c3-032b-4e57-b2e9-7a7764664230","externalId":"appt99","startDate":"2020-06-10T17:00:00Z","endDate":"2020-06-10T18:00:00Z","minutesDuration":60,"status":"BOOKED","patient":{"id":"bc713061-e998-4235-9a87-33be832ada5d","externalId":"cc"},"organization":{"id":"7ffed136-72f9-4753-979c-aef9b509e8c6","externalId":"hospital"},"practitioner":{"id":"c012250c-e3d3-4a61-948d-cc24d9472cd7","externalId":"scully"},"measurementEncounter":null}}}}'
+  recorded_at: Mon, 15 Jun 2020 20:37:27 GMT
 recorded_with: VCR 6.0.0

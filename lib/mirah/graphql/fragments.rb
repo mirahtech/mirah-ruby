@@ -90,6 +90,16 @@ module Mirah
             id
             externalId
           }
+          measurementEncounter {
+            id
+            measurementInvitations {
+              id
+              phase
+              status
+              notificationStatus
+              lastNotificationDate
+            }
+          }
         }
       GRAPHQL
     end

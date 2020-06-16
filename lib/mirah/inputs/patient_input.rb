@@ -18,7 +18,7 @@ module Mirah
 
       # @!attribute [r] birth_date
       #   @return (see Mirah::Data::Patient#birth_date)
-      input :birth_date, required: false, serializer: Serializers::DateSerializer
+      input :birth_date, required: false, serializer: Serializers::DateSerializer.new
 
       # @!attribute [r] gender
       #   @return (see Mirah::Data::Patient#gender)

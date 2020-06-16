@@ -11,22 +11,22 @@ module Mirah
     # A standard serializer which just passes through the value as defined. This is used for basic JSON types
     # which have already been serialized correctly.
     class ScalarSerializer
-      def self.serialize(value)
+      def serialize(value)
         value
       end
 
-      def self.deserialize(value)
+      def deserialize(value)
         value
       end
     end
 
     # Serialize types for a date in ISO 8601 format.
     class DateSerializer
-      def self.serialize(value)
+      def serialize(value)
         Date.parse(value.to_s).iso8601 if value
       end
 
-      def self.deserialize(value)
+      def deserialize(value)
         Date.iso8601(value) if value
       rescue ArgumentError, TypeError
         # Invalid input
@@ -36,11 +36,11 @@ module Mirah
 
     # Serialize types for a date time in ISO 8601 format.
     class DateTimeSerializer
-      def self.serialize(value)
+      def serialize(value)
         value&.iso8601
       end
 
-      def self.deserialize(value)
+      def deserialize(value)
         case value
         when DateTime
           value
@@ -51,6 +51,29 @@ module Mirah
         end
       rescue StandardError
         nil
+      end
+    end
+
+    # Serialize subobjects using their standard serializer
+    class NestedObjectSerializer
+      def initialize(subclass)
+        @subclass = subclass
+      end
+
+      def serialize(value)
+        if value.is_a? Array
+          value.map(&:to_graphql_hash)
+        else
+          value.to_graphql_hash
+        end
+      end
+
+      def deserialize(value)
+        if value.is_a? Array
+          value.map { |item| @subclass.from_graphql_hash(item) }
+        else
+          @subclass.from_graphql_hash(value)
+        end
       end
     end
   end
