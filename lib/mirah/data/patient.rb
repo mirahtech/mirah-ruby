@@ -41,6 +41,14 @@ module Mirah
       #   @return [string] The patient's primary phone number that is suitable for receiving text messages.
       #    Please do not use a phone number which corresponds to a landline as text messages will not be received.
       attribute :phone_number
+
+      # @!attribute [r] managing_organization_id
+      #   @return [string] The internal mirah id of the organization this patient is with
+      attribute :managing_organization_id, path: %w[managingOrganization], target: 'id'
+
+      # @!attribute [r] external_managing_organization_id
+      #   @return [string] Your system identifier for the organization this patient is with
+      attribute :external_managing_organization_id, path: %w[managingOrganization], target: 'externalId'
     end
   end
 end

@@ -24,6 +24,10 @@ module Mirah
           primaryLanguage
           email
           phoneNumber
+          managingOrganization {
+            id
+            externalId
+          }
           identifier {
             value
           }
