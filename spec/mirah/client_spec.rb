@@ -121,7 +121,7 @@ RSpec.describe Mirah::Client do
       VCR.use_cassette('patients') do
         collection = authorized_client.query_patients
         expect(collection.length).to be > 0
-        expect(collection.results.map(&:given_name)).to match_array(%w[Andrew Brian Charlotte Tim])
+        expect(collection.results.map(&:given_name)).to match_array(%w[Andrew Brian Charlotte])
       end
     end
 
