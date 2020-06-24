@@ -35,6 +35,10 @@ module Mirah
       # @!attribute [r] phone_number
       #   @return (see Mirah::Data::Patient#phone_number)
       input :phone_number, required: false
+
+      # @!attribute [r] external_managing_organization_id
+      #   @return (see Mirah::Data::Patient#external_managing_organization_id)
+      input :external_managing_organization_id, required: false
     end
   end
 end

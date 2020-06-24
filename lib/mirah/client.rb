@@ -104,6 +104,7 @@ module Mirah
     # @option input_values [String, nil] :primary_language see {Data::Patient#primary_language}
     # @option input_values [String, nil] :email see {Data::Patient#email}
     # @option input_values [String, nil] :phone_number see {Data::Patient#phone_number}
+    # @option input_values [String, nil] :external_managing_organization_id see {Data::Patient#external_managing_organization_id}
     # @return [PushResult<Data::Patient>] the operation result with a patient on success
     def push_patient(external_id:, **input_values)
       mutate(Graphql::Mutations::CreateOrUpdatePatientMutation,

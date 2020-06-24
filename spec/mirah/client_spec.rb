@@ -121,7 +121,7 @@ RSpec.describe Mirah::Client do
       VCR.use_cassette('patients') do
         collection = authorized_client.query_patients
         expect(collection.length).to be > 0
-        expect(collection.results.map(&:given_name)).to match_array(%w[Andrew Brian Charlotte])
+        expect(collection.results.map(&:given_name)).to match_array(%w[Andrew Brian Charlotte Tim])
       end
     end
 
@@ -152,7 +152,8 @@ RSpec.describe Mirah::Client do
         birth_date: Date.parse('2000-01-01'),
         email: 'tim@mirah.com',
         phone_number: '555-555-5555',
-        gender: 'MALE'
+        gender: 'MALE',
+        external_managing_organization_id: "hospital"
       }
     end
 
