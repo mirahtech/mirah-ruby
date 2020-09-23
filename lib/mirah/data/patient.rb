@@ -42,6 +42,11 @@ module Mirah
       #    Please do not use a phone number which corresponds to a landline as text messages will not be received.
       attribute :phone_number
 
+      # @!attribute [r] timezone
+      #   @return [string] The patient's timezone. If not specified, the organization's default will be used. Timezone
+      #    should be formatted like: https://en.wikipedia.org/wiki/Tz_database
+      attribute :timezone
+
       # @!attribute [r] managing_organization_id
       #   @return [string] The internal mirah id of the organization this patient is with
       attribute :managing_organization_id, path: %w[managingOrganization], target: 'id'

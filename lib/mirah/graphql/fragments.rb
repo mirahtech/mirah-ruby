@@ -24,6 +24,7 @@ module Mirah
           primaryLanguage
           email
           phoneNumber
+          timezone
           managingOrganization {
             id
             externalId
