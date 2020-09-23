@@ -153,6 +153,7 @@ RSpec.describe Mirah::Client do
         email: 'tim@mirah.com',
         phone_number: '555-555-5555',
         gender: 'MALE',
+        timezone: 'America/Los_Angeles',
         external_managing_organization_id: "hospital"
       }
     end

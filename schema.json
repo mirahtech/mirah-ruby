@@ -440,6 +440,24 @@
               "description": "No-show",
               "isDeprecated": false,
               "deprecationReason": null
+            },
+            {
+              "name": "ENTERED_IN_ERROR",
+              "description": "Entered in error",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "CHECKED_IN",
+              "description": "Checked in",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "WAIT_LIST",
+              "description": "Wait list",
+              "isDeprecated": false,
+              "deprecationReason": null
             }
           ],
           "possibleTypes": null
@@ -1431,6 +1449,16 @@
             {
               "name": "phoneNumber",
               "description": "See Patient#phoneNumber",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "timezone",
+              "description": "See Patient#timezone",
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -4735,6 +4763,20 @@
             {
               "name": "primaryLanguage",
               "description": "The patient's primary language",
+              "args": [
+
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "timezone",
+              "description": "This user's timezone, used for localizing assessment notifications. If not specified, the institutional default will be used",
               "args": [
 
               ],
