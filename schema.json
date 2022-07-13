@@ -1023,6 +1023,16 @@
           "fields": null,
           "inputFields": [
             {
+              "name": "clientMutationId",
+              "description": "A unique identifier for the client performing the mutation.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "externalId",
               "description": "The external identifer for this appointment",
               "type": {
@@ -1109,16 +1119,6 @@
             {
               "name": "externalPractitionerId",
               "description": "The external identifer of the practitioner",
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "clientMutationId",
-              "description": "A unique identifier for the client performing the mutation.",
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -1223,6 +1223,16 @@
           "fields": null,
           "inputFields": [
             {
+              "name": "clientMutationId",
+              "description": "A unique identifier for the client performing the mutation.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "externalId",
               "description": "The external identifer for this organization",
               "type": {
@@ -1249,16 +1259,6 @@
             {
               "name": "externalPartOfId",
               "description": "See Organization#partOf",
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "clientMutationId",
-              "description": "A unique identifier for the client performing the mutation.",
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -1363,6 +1363,16 @@
           "fields": null,
           "inputFields": [
             {
+              "name": "clientMutationId",
+              "description": "A unique identifier for the client performing the mutation.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "externalId",
               "description": "See Patient#mrn",
               "type": {
@@ -1387,16 +1397,6 @@
               "defaultValue": null
             },
             {
-              "name": "gender",
-              "description": "See Patient#gender",
-              "type": {
-                "kind": "ENUM",
-                "name": "Gender",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
               "name": "birthDate",
               "description": "See Patient#mrn",
               "type": {
@@ -1407,8 +1407,8 @@
               "defaultValue": null
             },
             {
-              "name": "givenName",
-              "description": "See Patient#givenName",
+              "name": "legalGivenName",
+              "description": "See Patient#legalFivenName",
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -1417,11 +1417,91 @@
               "defaultValue": null
             },
             {
-              "name": "familyName",
-              "description": "See Patient#familyName",
+              "name": "legalFamilyName",
+              "description": "See Patient#legalFamilyName",
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "legalName",
+              "description": "See Patient#legalName",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "preferredGivenName",
+              "description": "See Patient#preferredFivenName",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "preferredFamilyName",
+              "description": "See Patient#preferredFamilyName",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "preferredName",
+              "description": "See Patient#preferredName",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "preferredPronouns",
+              "description": "See Patient#preferredPronouns",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "gender",
+              "description": "See Patient#gender",
+              "type": {
+                "kind": "ENUM",
+                "name": "Gender",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "genderIdentity",
+              "description": "See Patient#gender_identity",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "genderIdentityFhir",
+              "description": "See Patient#gender_identity_fhir",
+              "type": {
+                "kind": "ENUM",
+                "name": "GenderIdentity",
                 "ofType": null
               },
               "defaultValue": null
@@ -1469,16 +1549,6 @@
             {
               "name": "externalManagingOrganizationId",
               "description": "The external identifier for the managing organization. An error will be returned if this cannot be matched\n",
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "clientMutationId",
-              "description": "A unique identifier for the client performing the mutation.",
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
@@ -1583,6 +1653,16 @@
           "fields": null,
           "inputFields": [
             {
+              "name": "clientMutationId",
+              "description": "A unique identifier for the client performing the mutation.",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "externalId",
               "description": "The external identifer for this practitioner",
               "type": {
@@ -1681,16 +1761,6 @@
                     "ofType": null
                   }
                 }
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "clientMutationId",
-              "description": "A unique identifier for the client performing the mutation.",
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
               },
               "defaultValue": null
             }
@@ -1827,13 +1897,9 @@
 
               ],
               "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "ISO8601DateTime",
-                  "ofType": null
-                }
+                "kind": "SCALAR",
+                "name": "ISO8601DateTime",
+                "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
@@ -2642,6 +2708,12 @@
           "interfaces": null,
           "enumValues": [
             {
+              "name": "ASSESSMENT_IN_PROGRESS",
+              "description": "Measurement In Progress",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "NEW",
               "description": "New",
               "isDeprecated": false,
@@ -2723,7 +2795,7 @@
         {
           "kind": "ENUM",
           "name": "Gender",
-          "description": "Administrative gender as defined by https://www.hl7.org/fhir/valueset-administrative-gender.html",
+          "description": "Administrative sex as defined by https://www.hl7.org/fhir/valueset-administrative-gender.html",
           "fields": null,
           "inputFields": null,
           "interfaces": null,
@@ -2749,6 +2821,59 @@
             {
               "name": "UNKNOWN",
               "description": "Unknown",
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "possibleTypes": null
+        },
+        {
+          "kind": "ENUM",
+          "name": "GenderIdentity",
+          "description": "Gender Identity as defined by http://hl7.org/fhir/R4/valueset-gender-identity.html",
+          "fields": null,
+          "inputFields": null,
+          "interfaces": null,
+          "enumValues": [
+            {
+              "name": "MALE",
+              "description": "The patient identifies as male",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "FEMALE",
+              "description": "The patient identifies as female",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "NON_BINARY",
+              "description": "The patient identifies with neither/both female and male",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "TRANSGENDER_MALE",
+              "description": "The patient identifies as transgender female-to-male",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "TRANSGENDER_FEMALE",
+              "description": "The patient identifies as transgender male-to-female",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "OTHER",
+              "description": "Other gender identity",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "NON_DISCLOSE",
+              "description": "The patient does not wish to disclose his gender identity",
               "isDeprecated": false,
               "deprecationReason": null
             }
@@ -3334,6 +3459,18 @@
               "description": "The invitation was not started and has expired",
               "isDeprecated": false,
               "deprecationReason": null
+            },
+            {
+              "name": "PARTIAL",
+              "description": "The invitation was started but not completed and has now expired",
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "CANCELED",
+              "description": "The invitation was canceled",
+              "isDeprecated": false,
+              "deprecationReason": null
             }
           ],
           "possibleTypes": null
@@ -3349,7 +3486,7 @@
               "args": [
                 {
                   "name": "input",
-                  "description": null,
+                  "description": "Parameters for CreateOrUpdateAppointment",
                   "type": {
                     "kind": "NON_NULL",
                     "name": null,
@@ -3376,7 +3513,7 @@
               "args": [
                 {
                   "name": "input",
-                  "description": null,
+                  "description": "Parameters for CreateOrUpdateOrganization",
                   "type": {
                     "kind": "NON_NULL",
                     "name": null,
@@ -3403,7 +3540,7 @@
               "args": [
                 {
                   "name": "input",
-                  "description": null,
+                  "description": "Parameters for CreateOrUpdatePatient",
                   "type": {
                     "kind": "NON_NULL",
                     "name": null,
@@ -3430,7 +3567,7 @@
               "args": [
                 {
                   "name": "input",
-                  "description": null,
+                  "description": "Parameters for CreateOrUpdatePractitioner",
                   "type": {
                     "kind": "NON_NULL",
                     "name": null,
@@ -4617,13 +4754,9 @@
 
               ],
               "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
@@ -4643,19 +4776,43 @@
               "deprecationReason": null
             },
             {
+              "name": "genderIdentity",
+              "description": "The patient's gender identity as a string",
+              "args": [
+
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "genderIdentityFhir",
+              "description": "The patient's gender identity as expressed by the FHIR enum",
+              "args": [
+
+              ],
+              "type": {
+                "kind": "ENUM",
+                "name": "GenderIdentity",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "givenName",
               "description": "The patient's first or given name",
               "args": [
 
               ],
               "type": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                }
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
@@ -4719,6 +4876,48 @@
               "deprecationReason": null
             },
             {
+              "name": "legalFamilyName",
+              "description": "The patient's legal last or family name",
+              "args": [
+
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "legalGivenName",
+              "description": "The patient's legal first or given name",
+              "args": [
+
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "legalName",
+              "description": "The patient's legal last or family name",
+              "args": [
+
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "managingOrganization",
               "description": "The managing organization for this patient record. This is used most commonly in situations where there are\ndata firewalls between organizations and the patient is not in active treatment. In this case, managing\n organization can be used to show who has access to the patient record.\n",
               "args": [
@@ -4749,6 +4948,62 @@
             {
               "name": "phoneNumber",
               "description": "The patient's primary phone number that is suitable for receiving text messages. Please do not use a phone number which corresponds to a landline as text messages will not be received.",
+              "args": [
+
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "preferredFamilyName",
+              "description": "The patient's preferred last or family name",
+              "args": [
+
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "preferredGivenName",
+              "description": "The patient's preferred first or given name",
+              "args": [
+
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "preferredName",
+              "description": "The patient's preferred last or family name",
+              "args": [
+
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "preferredPronouns",
+              "description": "The patient's preferred pronouns",
               "args": [
 
               ],
@@ -8658,7 +8913,16 @@
               "name": "args",
               "description": null,
               "args": [
-
+                {
+                  "name": "includeDeprecated",
+                  "description": null,
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Boolean",
+                    "ofType": null
+                  },
+                  "defaultValue": "false"
+                }
               ],
               "type": {
                 "kind": "NON_NULL",
@@ -8689,6 +8953,20 @@
               "type": {
                 "kind": "SCALAR",
                 "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "isRepeatable",
+              "description": null,
+              "args": [
+
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Boolean",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -8915,6 +9193,12 @@
               "description": "Location adjacent to an input object field definition.",
               "isDeprecated": false,
               "deprecationReason": null
+            },
+            {
+              "name": "VARIABLE_DEFINITION",
+              "description": "Location adjacent to a variable definition.",
+              "isDeprecated": false,
+              "deprecationReason": null
             }
           ],
           "possibleTypes": null
@@ -9005,7 +9289,16 @@
               "name": "args",
               "description": null,
               "args": [
-
+                {
+                  "name": "includeDeprecated",
+                  "description": null,
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Boolean",
+                    "ofType": null
+                  },
+                  "defaultValue": "false"
+                }
               ],
               "type": {
                 "kind": "NON_NULL",
@@ -9137,6 +9430,20 @@
               "deprecationReason": null
             },
             {
+              "name": "deprecationReason",
+              "description": null,
+              "args": [
+
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "description",
               "description": null,
               "args": [
@@ -9146,6 +9453,24 @@
                 "kind": "SCALAR",
                 "name": "String",
                 "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "isDeprecated",
+              "description": null,
+              "args": [
+
+              ],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Boolean",
+                  "ofType": null
+                }
               },
               "isDeprecated": false,
               "deprecationReason": null
@@ -9199,6 +9524,20 @@
           "name": "__Schema",
           "description": "A GraphQL Schema defines the capabilities of a GraphQL server. It exposes all available types and directives on the server, as well as the entry points for query, mutation, and subscription operations.",
           "fields": [
+            {
+              "name": "description",
+              "description": null,
+              "args": [
+
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
             {
               "name": "directives",
               "description": "A list of all directives supported by this server.",
@@ -9390,7 +9729,16 @@
               "name": "inputFields",
               "description": null,
               "args": [
-
+                {
+                  "name": "includeDeprecated",
+                  "description": null,
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Boolean",
+                    "ofType": null
+                  },
+                  "defaultValue": "false"
+                }
               ],
               "type": {
                 "kind": "LIST",
@@ -9494,6 +9842,20 @@
                     "ofType": null
                   }
                 }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "specifiedByURL",
+              "description": null,
+              "args": [
+
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
@@ -9622,7 +9984,9 @@
           "description": "Marks an element of a GraphQL schema as no longer supported.",
           "locations": [
             "FIELD_DEFINITION",
-            "ENUM_VALUE"
+            "ENUM_VALUE",
+            "ARGUMENT_DEFINITION",
+            "INPUT_FIELD_DEFINITION"
           ],
           "args": [
             {
