@@ -79,6 +79,26 @@ jobs:
       - run:
           name: Tests
           command: bundle exec rake spec
+  test31:
+    docker:
+      - image: circleci/ruby:3.1.2-node
+    executor: ruby/default
+    steps:
+      - checkout
+      - run:
+          name: Configure Bundler
+          command: |
+            echo 'export BUNDLER_VERSION=2.1.4' >> $BASH_ENV
+            source $BASH_ENV
+            gem install bundler
+      - run:
+          name: Which bundler?
+          command: bundle -v
+      - ruby/bundle-install
+      - run:
+          name: Tests
+          command: bundle exec rake spec
+
 
 
 workflows:
@@ -89,5 +109,6 @@ workflows:
       - test25
       - test26
       - test27
+      - test31
 
       
