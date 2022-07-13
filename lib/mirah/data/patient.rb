@@ -15,11 +15,41 @@ module Mirah
 
       # @!attribute [r] given_name
       #   @return [string] The patient's first or given name
+      # @deprecated use legal_given_name instead
       attribute :given_name
+
+      # @!attribute [r] legal_given_name
+      #   @return [string] The patient's legal first or given name
+      attribute :legal_given_name
+
+      # @!attribute [r] preferred_given_name
+      #   @return [string] The patient's preferred first or given name
+      attribute :preferred_given_name
 
       # @!attribute [r] family_name
       #   @return [string] The patient's last or family name
+      # @deprecated use legal_family_name instead
       attribute :family_name
+
+      # @!attribute [r] legal_family_name
+      #   @return [string] The patient's legal last or family name
+      attribute :legal_family_name
+
+      # @!attribute [r] preferred_family_name
+      #   @return [string] The patient's preferred last or family name
+      attribute :preferred_family_name
+
+      # @!attribute [r] legal_name
+      #   @return [string] The patient's full legal name.
+      attribute :legal_name
+
+      # @!attribute [r] preferred_name
+      #   @return [string] The patient's full preferred name.
+      attribute :preferred_name
+
+      # @!attribute [r] preferred_pronouns
+      #   @return [string] The patient's preferred pronouns.
+      attribute :preferred_pronouns
 
       # @!attribute [r] birth_date
       #   @return [Date] The patient's date of birth.
@@ -28,6 +58,14 @@ module Mirah
       # @!attribute [r] gender
       #   @return [string] The patient's gender
       attribute :gender
+
+      # @!attribute [r] gender_identity
+      #   @return [string] The patient's gender identity as free text
+      attribute :gender_identity
+
+      # @!attribute [r] gender_identity_fhir
+      #   @return [string] The patient's gender identity as FHIR extension coded.
+      attribute :gender_identity_fhir
 
       # @!attribute [r] primary_language
       #   @return [string] The patient's primary language

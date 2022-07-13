@@ -16,6 +16,34 @@ module Mirah
       #   @return (see Mirah::Data::Patient#family_name)
       input :family_name, required: false
 
+      # @!attribute [r] preferred_given_name
+      #   @return (see Mirah::Data::Patient#preferred_given_name)
+      input :preferred_given_name, required: false
+
+      # @!attribute [r] preferred_family_name
+      #   @return (see Mirah::Data::Patient#preferred_family_name)
+      input :preferred_family_name, required: false
+
+      # @!attribute [r] legal_given_name
+      #   @return (see Mirah::Data::Patient#legal_given_name)
+      input :legal_given_name, required: false
+
+      # @!attribute [r] legal_family_name
+      #   @return (see Mirah::Data::Patient#legal_family_name)
+      input :legal_family_name, required: false
+
+      # @!attribute [r] preferred_name
+      #   @return (see Mirah::Data::Patient#preferred_name)
+      input :preferred_name, required: false
+
+      # @!attribute [r] legal_name
+      #   @return (see Mirah::Data::Patient#legal_name)
+      input :legal_name, required: false
+
+      # @!attribute [r] preferred_pronouns
+      #   @return (see Mirah::Data::Patient#preferred_pronouns)
+      input :preferred_pronouns, required: false
+
       # @!attribute [r] birth_date
       #   @return (see Mirah::Data::Patient#birth_date)
       input :birth_date, required: false, serializer: Serializers::DateSerializer.new
@@ -23,6 +51,14 @@ module Mirah
       # @!attribute [r] gender
       #   @return (see Mirah::Data::Patient#gender)
       input :gender, required: false
+
+      # @!attribute [r] gender_identity
+      #   @return (see Mirah::Data::Patient#gender_identity)
+      input :gender_identity, required: false
+
+      # @!attribute [r] gender_identity_fhir
+      #   @return (see Mirah::Data::Patient#gender_identity_fhir)
+      input :gender_identity_fhir, required: false
 
       # @!attribute [r] primary_language
       #   @return (see Mirah::Data::Patient#primary_language)
