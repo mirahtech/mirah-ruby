@@ -67,6 +67,38 @@ module Mirah
           }
         }
       GRAPHQL
+
+      # Create or update a diagnostic code
+      CreateOrUpdateDiagnosticCodeMutation = Graphql::ValidationClient.parse <<-'GRAPHQL'
+        mutation($input: CreateOrUpdateDiagnosticCodeInput!) {
+          createOrUpdateDiagnosticCode(input: $input) {
+            status
+            errors {
+              path
+              message
+            }
+            result {
+            ...Mirah::Graphql::Fragments::DiagnosticCodeFragment
+            }
+          }
+        }
+      GRAPHQL
+
+      # Create or update a patient condition
+      CreateOrUpdatePatientConditionMutation = Graphql::ValidationClient.parse <<-'GRAPHQL'
+        mutation($input: CreateOrUpdatePatientConditionInput!) {
+          createOrUpdatePatientCondition(input: $input) {
+            status
+            errors {
+              path
+              message
+            }
+            result {
+            ...Mirah::Graphql::Fragments::PatientConditionFragment
+            }
+          }
+        }
+      GRAPHQL
     end
   end
 end

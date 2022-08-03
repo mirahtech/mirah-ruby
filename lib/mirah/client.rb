@@ -104,7 +104,8 @@ module Mirah
     # @option input_values [String, nil] :primary_language see {Data::Patient#primary_language}
     # @option input_values [String, nil] :email see {Data::Patient#email}
     # @option input_values [String, nil] :phone_number see {Data::Patient#phone_number}
-    # @option input_values [String, nil] :external_managing_organization_id see {Data::Patient#external_managing_organization_id}
+    # @option input_values [String, nil] :external_managing_organization_id
+    #                                     see {Data::Patient#external_managing_organization_id}
     # @return [PushResult<Data::Patient>] the operation result with a patient on success
     def push_patient(external_id:, **input_values)
       mutate(Graphql::Mutations::CreateOrUpdatePatientMutation,
@@ -301,6 +302,123 @@ module Mirah
              Data::Appointment, 'createOrUpdateAppointment')
     end
 
+    #################################################################################################################
+    # DIAGNOSTIC CODE METHODS
+    #################################################################################################################
+
+    # Find an diagnostic code by the given Mirah internal UUID. This method should be used if you already know the Mirah
+    # identifier. If you wish to query by your own system identifier, you should use
+    # {#find_diagnostic_code_by_external_id}
+    #
+    # @since 0.4.0
+    # @param id [String] Mirah UUID for the diagnostic code
+    # @return [Data::DiagnosticCode, nil] the code, or nil if the record does not exist.
+    def find_diagnostic_code(id)
+      query_record(Graphql::Queries::DiagnosticCodeIdQuery, id, Data::DiagnosticCode, 'diagnosticCode')
+    end
+
+    # Find a diagnostic code by your external id. This is a convenience method. If you wish to query a list of
+    # codes by external id, please use {Client#query_diagnostic_codes}.
+    #
+    # @since 0.4.0
+    # @param external_id [String] The identifier of the system of record
+    # @return [Data::DiagnosticCode, nil] the code, or nil if the record does not exist.
+    def find_diagnostic_code_by_external_id(external_id)
+      query_record_by_external_id(Graphql::Queries::DiagnosticCodeExternalIdQuery,
+                                  external_id,
+                                  Data::DiagnosticCode,
+                                  'diagnosticCodeExternal')
+    end
+
+    # Query for diagnostic codes. You may specify a set of parameters as defined in
+    # {Mirah::Filters::DiagnosticCodeFilters}.
+    # Results are returned in a paginated format. See {Collection} for how to page results.
+    # @since 0.4.0
+    # @param external_id [Array<String>] See {Mirah::Filters::DiagnosticCodeFilters#external_id}
+    # @param search [Array<String>] See {Mirah::Filters::DiagnosticCodeFilters#search}
+    # @return [Collection<Data::Appointment>] a collection of pageable codes.
+    def query_diagnostic_codes(external_id: nil, search: nil)
+      query_connection(
+        Graphql::Queries::DiagnosticCodeQuery,
+        Filters::DiagnosticCodeFilters.new(external_id: external_id, search: search),
+        Filters::Paging.default,
+        Data::DiagnosticCode,
+        'diagnosticCodes'
+      )
+    end
+
+    # Create or update a diagnosis code. You must specify an external identifier, all other parameters are optional,
+    # but you may receive errors if you attempt to specify too few parameters for an appointment that does not exist.
+    #
+    # @since 0.1.0
+    # @param external_id [String] the external identifier for this code
+    # @option input_values [String, nil] :name see {Data::DiagnosticCode#name}
+    # @option input_values [String, nil] :code see {Data::DiagnosticCode#code}
+    # @return [PushResult<Data::DiagnosticCode>] the operation result with the code on success
+    def push_diagnostic_code(external_id:, **input_values)
+      mutate(Graphql::Mutations::CreateOrUpdateDiagnosticCodeMutation,
+             Inputs::DiagnosticCodeInput.new(input_values.merge(external_id: external_id)),
+             Data::DiagnosticCode, 'createOrUpdateDiagnosticCode')
+    end
+
+    #################################################################################################################
+    # PATIENT CONDITION METHODS
+    #################################################################################################################
+
+    # Find an condition by the given Mirah internal UUID. This method should be used if you already know the Mirah
+    # identifier. If you wish to query by your own system identifier, you should use
+    # {#find_patient_condition_by_external_id}
+    #
+    # @since 0.4.0
+    # @param id [String] Mirah UUID for the condition
+    # @return [Data::PatientCondition, nil] the code, or nil if the record does not exist.
+    def find_patient_condition(id)
+      query_record(Graphql::Queries::PatientConditionIdQuery, id, Data::PatientCondition, 'patientCondition')
+    end
+
+    # Find a condition by your external id. This is a convenience method. If you wish to query a list of
+    # codes by external id, please use {Client#query_patient_conditions}.
+    #
+    # @since 0.4.0
+    # @param external_id [String] The identifier of the system of record
+    # @return [Data::PatientCondition, nil] the code, or nil if the record does not exist.
+    def find_patient_condition_by_external_id(external_id)
+      query_record_by_external_id(Graphql::Queries::PatientConditionExternalIdQuery,
+                                  external_id,
+                                  Data::PatientCondition,
+                                  'patientConditionExternal')
+    end
+
+    # Query for conditions. You may specify a set of parameters as defined in
+    # {Mirah::Filters::PatientConditionFilters}.
+    # Results are returned in a paginated format. See {Collection} for how to page results.
+    # @since 0.4.0
+    # @param external_id [Array<String>] See {Mirah::Filters::PatientConditionFilters#external_id}
+    # @return [Collection<Data::Appointment>] a collection of pageable codes.
+    def query_patient_conditions(external_id: nil)
+      query_connection(
+        Graphql::Queries::PatientConditionQuery,
+        Filters::PatientConditionFilters.new(external_id: external_id),
+        Filters::Paging.default,
+        Data::PatientCondition,
+        'patientConditions'
+      )
+    end
+
+    # Create or update a condition. You must specify an external identifier, all other parameters are optional,
+    # but you may receive errors if you attempt to specify too few parameters for an appointment that does not exist.
+    #
+    # @since 0.1.0
+    # @param external_id [String] the external identifier for this code
+    # @option input_values [String, nil] :name see {Data::PatientCondition#name}
+    # @option input_values [String, nil] :code see {Data::PatientCondition#code}
+    # @return [PushResult<Data::PatientCondition>] the operation result with the code on success
+    def push_patient_condition(external_id:, **input_values)
+      mutate(Graphql::Mutations::CreateOrUpdatePatientConditionMutation,
+             Inputs::PatientConditionInput.new(input_values.merge(external_id: external_id)),
+             Data::PatientCondition, 'createOrUpdatePatientCondition')
+    end
+
     ##################################################################################################################
     # Internal methods
     ##################################################################################################################
@@ -411,7 +529,7 @@ module Mirah
         if response.errors[:data] == ['401 Unauthorized'] # rubocop:disable Style/GuardClause
           raise Errors::InvalidCredentials, 'The credentials you have supplied are invalid'
         else
-          raise Errors::ServerError, 'Unknown error from Mirah server: ' + response.errors.values.flatten.join(',')
+          raise Errors::ServerError, "Unknown error from Mirah server: #{response.errors.values.flatten.join(',')}"
         end
       end
 

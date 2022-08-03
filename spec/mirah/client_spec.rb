@@ -151,10 +151,10 @@ RSpec.describe Mirah::Client do
         family_name: 'Thomas',
         birth_date: Date.parse('2000-01-01'),
         email: 'tim@mirah.com',
-        phone_number: '555-555-5555',
+        phone_number: '+15555555555',
         gender: 'MALE',
         timezone: 'America/Los_Angeles',
-        external_managing_organization_id: "hospital"
+        external_managing_organization_id: 'hospital'
       }
     end
 
@@ -323,6 +323,107 @@ RSpec.describe Mirah::Client do
     it 'creates appointments successfully' do
       VCR.use_cassette('appointments') do
         result = authorized_client.push_appointment(external_id: 'appt99', **params)
+
+        expect(result).to have_attributes(
+          status: 'CREATED',
+          result: have_attributes(params)
+        )
+      end
+    end
+  end
+
+  # DIAGNOSIS CODE METHODS
+  describe '.query_diagnostic_codes' do
+    it 'returns successfully' do
+      VCR.use_cassette('diagnostic_codes') do
+        collection = authorized_client.query_diagnostic_codes
+        expect(collection.length).to be > 0
+        expect(collection.results.map(&:external_id)).to match_array(%w[cnd1 cnd2])
+      end
+    end
+
+    it 'returns successfully with parameters' do
+      VCR.use_cassette('diagnostic_codes') do
+        collection = authorized_client.query_diagnostic_codes(external_id: ['cnd1'])
+        expect(collection.length).to eq 1
+        expect(collection.results.map(&:external_id)).to match_array(['cnd1'])
+      end
+    end
+  end
+
+  describe '.find_diagnostic_codes' do
+    it 'finds diagnostic_codes successfully' do
+      VCR.use_cassette('diagnostic_codes') do
+        external_find = authorized_client.find_diagnostic_code_by_external_id('cnd1')
+        result = authorized_client.find_diagnostic_code(external_find.id)
+        expect(result.external_id).to eq 'cnd1'
+      end
+    end
+  end
+
+  describe '.push_diagnostic_code' do
+    let(:params) do
+      {
+        name: 'OCD',
+        code: 'F42'
+      }
+    end
+
+    it 'creates diagnostic_codes successfully' do
+      VCR.use_cassette('diagnostic_codes') do
+        result = authorized_client.push_diagnostic_code(external_id: 'cnd99', **params)
+
+        expect(result).to have_attributes(
+          status: 'CREATED',
+          result: have_attributes(params)
+        )
+      end
+    end
+  end
+
+  # PATIENT CONDITION METHODS
+  describe '.query_patient_conditions' do
+    it 'returns successfully' do
+      VCR.use_cassette('patient_conditions') do
+        collection = authorized_client.query_patient_conditions
+        expect(collection.length).to be > 0
+        expect(collection.results.map(&:external_id)).to match_array(%w[ptcnd1 ptcnd2])
+      end
+    end
+
+    it 'returns successfully with parameters' do
+      VCR.use_cassette('patient_conditions') do
+        collection = authorized_client.query_patient_conditions(external_id: ['ptcnd1'])
+        expect(collection.length).to eq 1
+        expect(collection.results.map(&:external_id)).to match_array(['ptcnd1'])
+      end
+    end
+  end
+
+  describe '.find_patient_conditions' do
+    it 'finds patient_conditions successfully' do
+      VCR.use_cassette('patient_conditions') do
+        external_find = authorized_client.find_patient_condition_by_external_id('ptcnd1')
+        result = authorized_client.find_patient_condition(external_find.id)
+        expect(result.external_id).to eq 'ptcnd1'
+      end
+    end
+  end
+
+  describe '.push_patient_condition' do
+    let(:params) do
+      {
+        external_patient_id: 'bb',
+        external_diagnostic_code_id: 'cnd1',
+        status: 'REMISSION',
+        onset_date: DateTime.parse('2020-06-10T17:00:00Z'),
+        abatement_date: DateTime.parse('2022-06-10T18:00:00Z')
+      }
+    end
+
+    it 'creates patient_conditions successfully' do
+      VCR.use_cassette('patient_conditions') do
+        result = authorized_client.push_patient_condition(external_id: 'ptcnd99', **params)
 
         expect(result).to have_attributes(
           status: 'CREATED',
