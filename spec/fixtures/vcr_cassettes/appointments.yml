@@ -36,24 +36,53 @@ http_interactions:
     headers:
       X-Frame-Options:
       - ALLOWALL
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"e7b1337b310228fa145f67149e423323"
+      - W/"a0d252cb1e943ec3078856031d612fca"
       Cache-Control:
       - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'default-src ''self''; script-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        www.google-analytics.com ''unsafe-inline'' https://www.gstatic.com ''unsafe-eval''
+        https://beacon-v2.helpscout.net https://d12wqas9hcki3z.cloudfront.net https://d33v4339jhl8k0.cloudfront.net
+        https://cdn.mxpnl.com https://cdn4.mxpnl.com blob:; font-src ''self'' *.assets.mirah.dev
+        *.assets.mirah.com data: blob https://fonts.gstatic.com https://beacon-v2.helpscout.net;
+        connect-src ''self'' *.assets.mirah.dev *.assets.mirah.com www.google-analytics.com
+        https://*.nr-data.net https://beaconapi.helpscout.net https://chatapi.helpscout.net
+        https://d3hb14vkzrxvla.cloudfront.net wss://*.pusher.com *.sumologic.com *.mixpanel.com
+        cdn.mxpnl.com *.ingest.sentry.io; img-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        data: ''unsafe-inline'' https://*.nr-data.net www.google-analytics.com https://*.gravatar.com
+        s3.amazonaws.com https://beacon-v2.helpscout.net https://d33v4339jhl8k0.cloudfront.net
+        www.gstatic.com; style-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        ''unsafe-inline'' https://fonts.googleapis.com https://beacon-v2.helpscout.net
+        https://www.gstatic.com; media-src ''self'' https://beacon-v2.helpscout.net;
+        base-uri https://docs.helpscout.net; frame-src https://beacon-v2.helpscout.net;
+        object-src ''self'' blob: https://beacon-v2.helpscout.net; manifest-src ''self''
+        *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
+        ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - 395663b6-52a0-45af-b307-36ddd7db6e5a
+      - 912e6273-820a-4dd1-ad65-a09ccf83adf2
       X-Runtime:
-      - '0.049663'
+      - '0.034548'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"appointments":{"nodes":[{"id":"92b7ed8e-2533-424d-bd87-49d95f37e37c","externalId":"appt1","startDate":"2020-06-07T08:00:00Z","endDate":"2020-06-07T09:00:00Z","minutesDuration":60,"status":"FULFILLED","patient":{"id":"4a6b42c6-3708-41de-b2a1-481bc7e1e2a2","externalId":"aa"},"organization":null,"practitioner":{"id":"2229c7fb-fc5f-4b1a-969b-22609a13f648","externalId":"house"},"measurementEncounter":null},{"id":"39d5d153-e9dd-4a6f-8ffe-669483ca53ef","externalId":"appt2","startDate":"2020-06-14T08:00:00Z","endDate":"2020-06-14T09:00:00Z","minutesDuration":60,"status":"BOOKED","patient":{"id":"4a6b42c6-3708-41de-b2a1-481bc7e1e2a2","externalId":"aa"},"organization":null,"practitioner":{"id":"2229c7fb-fc5f-4b1a-969b-22609a13f648","externalId":"house"},"measurementEncounter":null}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"Mg"}}}}'
-  recorded_at: Mon, 15 Jun 2020 20:37:27 GMT
+      string: '{"data":{"appointments":{"nodes":[{"id":"154867b3-19d5-45a9-b71e-701a2272eae2","externalId":"appt1","startDate":"2020-06-07T08:00:00Z","endDate":"2020-06-07T09:00:00Z","minutesDuration":60,"status":"FULFILLED","patient":{"id":"e93b239b-f818-41c0-93c4-00bc6627d08b","externalId":"aa"},"organization":null,"practitioner":{"id":"9e9ed7d8-3f07-425f-937c-0d6cb2e60487","externalId":"house"},"measurementEncounter":null},{"id":"6cc5c286-a4bb-4f43-b2a0-c0ecc88c15bd","externalId":"appt2","startDate":"2020-06-14T08:00:00Z","endDate":"2020-06-14T09:00:00Z","minutesDuration":60,"status":"BOOKED","patient":{"id":"e93b239b-f818-41c0-93c4-00bc6627d08b","externalId":"aa"},"organization":null,"practitioner":{"id":"9e9ed7d8-3f07-425f-937c-0d6cb2e60487","externalId":"house"},"measurementEncounter":null}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"Mg"}}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -90,24 +119,53 @@ http_interactions:
     headers:
       X-Frame-Options:
       - ALLOWALL
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"40946e603bcb509153d665e632841729"
+      - W/"7abc0e0a8467de42cad75ec2fc03a931"
       Cache-Control:
       - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'default-src ''self''; script-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        www.google-analytics.com ''unsafe-inline'' https://www.gstatic.com ''unsafe-eval''
+        https://beacon-v2.helpscout.net https://d12wqas9hcki3z.cloudfront.net https://d33v4339jhl8k0.cloudfront.net
+        https://cdn.mxpnl.com https://cdn4.mxpnl.com blob:; font-src ''self'' *.assets.mirah.dev
+        *.assets.mirah.com data: blob https://fonts.gstatic.com https://beacon-v2.helpscout.net;
+        connect-src ''self'' *.assets.mirah.dev *.assets.mirah.com www.google-analytics.com
+        https://*.nr-data.net https://beaconapi.helpscout.net https://chatapi.helpscout.net
+        https://d3hb14vkzrxvla.cloudfront.net wss://*.pusher.com *.sumologic.com *.mixpanel.com
+        cdn.mxpnl.com *.ingest.sentry.io; img-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        data: ''unsafe-inline'' https://*.nr-data.net www.google-analytics.com https://*.gravatar.com
+        s3.amazonaws.com https://beacon-v2.helpscout.net https://d33v4339jhl8k0.cloudfront.net
+        www.gstatic.com; style-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        ''unsafe-inline'' https://fonts.googleapis.com https://beacon-v2.helpscout.net
+        https://www.gstatic.com; media-src ''self'' https://beacon-v2.helpscout.net;
+        base-uri https://docs.helpscout.net; frame-src https://beacon-v2.helpscout.net;
+        object-src ''self'' blob: https://beacon-v2.helpscout.net; manifest-src ''self''
+        *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
+        ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - 1d7dae70-6089-47e4-9f14-1ea0bb279415
+      - 1b22923b-578f-4cd4-9124-0022592f8c6c
       X-Runtime:
-      - '0.052069'
+      - '0.041745'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"appointments":{"nodes":[{"id":"92b7ed8e-2533-424d-bd87-49d95f37e37c","externalId":"appt1","startDate":"2020-06-07T08:00:00Z","endDate":"2020-06-07T09:00:00Z","minutesDuration":60,"status":"FULFILLED","patient":{"id":"4a6b42c6-3708-41de-b2a1-481bc7e1e2a2","externalId":"aa"},"organization":null,"practitioner":{"id":"2229c7fb-fc5f-4b1a-969b-22609a13f648","externalId":"house"},"measurementEncounter":null}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"MQ"}}}}'
-  recorded_at: Mon, 15 Jun 2020 20:37:27 GMT
+      string: '{"data":{"appointments":{"nodes":[{"id":"154867b3-19d5-45a9-b71e-701a2272eae2","externalId":"appt1","startDate":"2020-06-07T08:00:00Z","endDate":"2020-06-07T09:00:00Z","minutesDuration":60,"status":"FULFILLED","patient":{"id":"e93b239b-f818-41c0-93c4-00bc6627d08b","externalId":"aa"},"organization":null,"practitioner":{"id":"9e9ed7d8-3f07-425f-937c-0d6cb2e60487","externalId":"house"},"measurementEncounter":null}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"MQ"}}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -139,24 +197,53 @@ http_interactions:
     headers:
       X-Frame-Options:
       - ALLOWALL
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"46b7c776b3db5928f3c5b24aa609a026"
+      - W/"92f336ca2de90a833cb35920965ef1a0"
       Cache-Control:
       - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'default-src ''self''; script-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        www.google-analytics.com ''unsafe-inline'' https://www.gstatic.com ''unsafe-eval''
+        https://beacon-v2.helpscout.net https://d12wqas9hcki3z.cloudfront.net https://d33v4339jhl8k0.cloudfront.net
+        https://cdn.mxpnl.com https://cdn4.mxpnl.com blob:; font-src ''self'' *.assets.mirah.dev
+        *.assets.mirah.com data: blob https://fonts.gstatic.com https://beacon-v2.helpscout.net;
+        connect-src ''self'' *.assets.mirah.dev *.assets.mirah.com www.google-analytics.com
+        https://*.nr-data.net https://beaconapi.helpscout.net https://chatapi.helpscout.net
+        https://d3hb14vkzrxvla.cloudfront.net wss://*.pusher.com *.sumologic.com *.mixpanel.com
+        cdn.mxpnl.com *.ingest.sentry.io; img-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        data: ''unsafe-inline'' https://*.nr-data.net www.google-analytics.com https://*.gravatar.com
+        s3.amazonaws.com https://beacon-v2.helpscout.net https://d33v4339jhl8k0.cloudfront.net
+        www.gstatic.com; style-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        ''unsafe-inline'' https://fonts.googleapis.com https://beacon-v2.helpscout.net
+        https://www.gstatic.com; media-src ''self'' https://beacon-v2.helpscout.net;
+        base-uri https://docs.helpscout.net; frame-src https://beacon-v2.helpscout.net;
+        object-src ''self'' blob: https://beacon-v2.helpscout.net; manifest-src ''self''
+        *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
+        ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - d3d37715-f29a-49b0-948d-48137e5de198
+      - bd440d30-1636-4e50-9e6a-ee84528896ec
       X-Runtime:
-      - '0.048185'
+      - '0.052813'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"appointmentExternal":{"id":"92b7ed8e-2533-424d-bd87-49d95f37e37c","externalId":"appt1","startDate":"2020-06-07T08:00:00Z","endDate":"2020-06-07T09:00:00Z","minutesDuration":60,"status":"FULFILLED","patient":{"id":"4a6b42c6-3708-41de-b2a1-481bc7e1e2a2","externalId":"aa"},"organization":null,"practitioner":{"id":"2229c7fb-fc5f-4b1a-969b-22609a13f648","externalId":"house"},"measurementEncounter":null}}}'
-  recorded_at: Mon, 15 Jun 2020 20:37:27 GMT
+      string: '{"data":{"appointmentExternal":{"id":"154867b3-19d5-45a9-b71e-701a2272eae2","externalId":"appt1","startDate":"2020-06-07T08:00:00Z","endDate":"2020-06-07T09:00:00Z","minutesDuration":60,"status":"FULFILLED","patient":{"id":"e93b239b-f818-41c0-93c4-00bc6627d08b","externalId":"aa"},"organization":null,"practitioner":{"id":"9e9ed7d8-3f07-425f-937c-0d6cb2e60487","externalId":"house"},"measurementEncounter":null}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -167,7 +254,7 @@ http_interactions:
         Mirah__Graphql__Fragments__AppointmentFragment on Appointment {\n  id\n  externalId\n  startDate\n  endDate\n  minutesDuration\n  status\n  patient
         {\n    id\n    externalId\n  }\n  organization {\n    id\n    externalId\n  }\n  organization
         {\n    id\n    externalId\n  }\n  practitioner {\n    id\n    externalId\n  }\n  measurementEncounter
-        {\n    id\n    measurementInvitations {\n      id\n      phase\n      status\n      notificationStatus\n      lastNotificationDate\n    }\n  }\n}","variables":{"id":"92b7ed8e-2533-424d-bd87-49d95f37e37c"},"operationName":"Mirah__Graphql__Queries__AppointmentIdQuery"}'
+        {\n    id\n    measurementInvitations {\n      id\n      phase\n      status\n      notificationStatus\n      lastNotificationDate\n    }\n  }\n}","variables":{"id":"154867b3-19d5-45a9-b71e-701a2272eae2"},"operationName":"Mirah__Graphql__Queries__AppointmentIdQuery"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -188,24 +275,53 @@ http_interactions:
     headers:
       X-Frame-Options:
       - ALLOWALL
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"150eedaf8d5b861bb93596c0cf118337"
+      - W/"96839b0446e2ea7056b4917c9dac33cb"
       Cache-Control:
       - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'default-src ''self''; script-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        www.google-analytics.com ''unsafe-inline'' https://www.gstatic.com ''unsafe-eval''
+        https://beacon-v2.helpscout.net https://d12wqas9hcki3z.cloudfront.net https://d33v4339jhl8k0.cloudfront.net
+        https://cdn.mxpnl.com https://cdn4.mxpnl.com blob:; font-src ''self'' *.assets.mirah.dev
+        *.assets.mirah.com data: blob https://fonts.gstatic.com https://beacon-v2.helpscout.net;
+        connect-src ''self'' *.assets.mirah.dev *.assets.mirah.com www.google-analytics.com
+        https://*.nr-data.net https://beaconapi.helpscout.net https://chatapi.helpscout.net
+        https://d3hb14vkzrxvla.cloudfront.net wss://*.pusher.com *.sumologic.com *.mixpanel.com
+        cdn.mxpnl.com *.ingest.sentry.io; img-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        data: ''unsafe-inline'' https://*.nr-data.net www.google-analytics.com https://*.gravatar.com
+        s3.amazonaws.com https://beacon-v2.helpscout.net https://d33v4339jhl8k0.cloudfront.net
+        www.gstatic.com; style-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        ''unsafe-inline'' https://fonts.googleapis.com https://beacon-v2.helpscout.net
+        https://www.gstatic.com; media-src ''self'' https://beacon-v2.helpscout.net;
+        base-uri https://docs.helpscout.net; frame-src https://beacon-v2.helpscout.net;
+        object-src ''self'' blob: https://beacon-v2.helpscout.net; manifest-src ''self''
+        *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
+        ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - 4873f78b-4457-4735-a6c8-51682293f885
+      - 889855aa-4213-4867-9435-5ab544f7ab76
       X-Runtime:
-      - '0.040602'
+      - '0.027740'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"appointment":{"id":"92b7ed8e-2533-424d-bd87-49d95f37e37c","externalId":"appt1","startDate":"2020-06-07T08:00:00Z","endDate":"2020-06-07T09:00:00Z","minutesDuration":60,"status":"FULFILLED","patient":{"id":"4a6b42c6-3708-41de-b2a1-481bc7e1e2a2","externalId":"aa"},"organization":null,"practitioner":{"id":"2229c7fb-fc5f-4b1a-969b-22609a13f648","externalId":"house"},"measurementEncounter":null}}}'
-  recorded_at: Mon, 15 Jun 2020 20:37:27 GMT
+      string: '{"data":{"appointment":{"id":"154867b3-19d5-45a9-b71e-701a2272eae2","externalId":"appt1","startDate":"2020-06-07T08:00:00Z","endDate":"2020-06-07T09:00:00Z","minutesDuration":60,"status":"FULFILLED","patient":{"id":"e93b239b-f818-41c0-93c4-00bc6627d08b","externalId":"aa"},"organization":null,"practitioner":{"id":"9e9ed7d8-3f07-425f-937c-0d6cb2e60487","externalId":"house"},"measurementEncounter":null}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -239,22 +355,51 @@ http_interactions:
     headers:
       X-Frame-Options:
       - ALLOWALL
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"864a17808963295392a1462043936c90"
+      - W/"c476a646e830545d385fa76c5cf886ab"
       Cache-Control:
       - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'default-src ''self''; script-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        www.google-analytics.com ''unsafe-inline'' https://www.gstatic.com ''unsafe-eval''
+        https://beacon-v2.helpscout.net https://d12wqas9hcki3z.cloudfront.net https://d33v4339jhl8k0.cloudfront.net
+        https://cdn.mxpnl.com https://cdn4.mxpnl.com blob:; font-src ''self'' *.assets.mirah.dev
+        *.assets.mirah.com data: blob https://fonts.gstatic.com https://beacon-v2.helpscout.net;
+        connect-src ''self'' *.assets.mirah.dev *.assets.mirah.com www.google-analytics.com
+        https://*.nr-data.net https://beaconapi.helpscout.net https://chatapi.helpscout.net
+        https://d3hb14vkzrxvla.cloudfront.net wss://*.pusher.com *.sumologic.com *.mixpanel.com
+        cdn.mxpnl.com *.ingest.sentry.io; img-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        data: ''unsafe-inline'' https://*.nr-data.net www.google-analytics.com https://*.gravatar.com
+        s3.amazonaws.com https://beacon-v2.helpscout.net https://d33v4339jhl8k0.cloudfront.net
+        www.gstatic.com; style-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        ''unsafe-inline'' https://fonts.googleapis.com https://beacon-v2.helpscout.net
+        https://www.gstatic.com; media-src ''self'' https://beacon-v2.helpscout.net;
+        base-uri https://docs.helpscout.net; frame-src https://beacon-v2.helpscout.net;
+        object-src ''self'' blob: https://beacon-v2.helpscout.net; manifest-src ''self''
+        *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
+        ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - c023dfa7-e912-40a2-85ec-633eef012500
+      - c7bcb8d1-4ad1-4a58-9c39-018e5d8dad1b
       X-Runtime:
-      - '0.153152'
+      - '0.181972'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"createOrUpdateAppointment":{"status":"CREATED","errors":[],"result":{"id":"2dd6f7c3-032b-4e57-b2e9-7a7764664230","externalId":"appt99","startDate":"2020-06-10T17:00:00Z","endDate":"2020-06-10T18:00:00Z","minutesDuration":60,"status":"BOOKED","patient":{"id":"bc713061-e998-4235-9a87-33be832ada5d","externalId":"cc"},"organization":{"id":"7ffed136-72f9-4753-979c-aef9b509e8c6","externalId":"hospital"},"practitioner":{"id":"c012250c-e3d3-4a61-948d-cc24d9472cd7","externalId":"scully"},"measurementEncounter":null}}}}'
-  recorded_at: Mon, 15 Jun 2020 20:37:27 GMT
-recorded_with: VCR 6.0.0
+      string: '{"data":{"createOrUpdateAppointment":{"status":"CREATED","errors":[],"result":{"id":"0c246adb-e929-4931-a9b6-b12d51c6f800","externalId":"appt99","startDate":"2020-06-10T17:00:00Z","endDate":"2020-06-10T18:00:00Z","minutesDuration":60,"status":"BOOKED","patient":{"id":"dd8dd6b2-4751-4dda-a7b6-ff3c49976eeb","externalId":"cc"},"organization":{"id":"c39ae9df-76bb-400e-ae6a-7c1afc482eb2","externalId":"hospital"},"practitioner":{"id":"ca538016-3434-49d9-bc8b-3e22c12f1d95","externalId":"scully"},"measurementEncounter":null}}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:37 GMT
+recorded_with: VCR 6.1.0

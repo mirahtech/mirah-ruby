@@ -107,6 +107,39 @@ module Mirah
           }
         }
       GRAPHQL
+
+      DiagnosticCodeFragment = Graphql::ValidationClient.parse <<-'GRAPHQL'
+        fragment on DiagnosticCode {
+          id
+          externalId
+          name
+          code
+          identifier {
+            value
+          }
+        }
+      GRAPHQL
+
+      PatientConditionFragment = Graphql::ValidationClient.parse <<-'GRAPHQL'
+        fragment on PatientCondition {
+          id
+          externalId
+          patient {
+            id
+            externalId
+          }
+          diagnosticCode {
+            id
+            externalId
+          }
+          identifier {
+            value
+          }
+          onsetDate
+          abatementDate
+          status
+        }
+      GRAPHQL
     end
   end
 end

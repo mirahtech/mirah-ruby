@@ -5,15 +5,15 @@ http_interactions:
     uri: http://localhost:3000/integration_api/graphql
     body:
       encoding: UTF-8
-      string: '{"query":"query Mirah__Graphql__Queries__OrganizationQuery($first:
-        Int, $last: Int, $after: String, $before: String, $externalId: [String!],
-        $search: String) {\n  organizations(first: $first, after: $after, before:
-        $before, last: $last, externalId: $externalId, search: $search) {\n    nodes
-        {\n      ...Mirah__Graphql__Fragments__OrganizationFragment\n    }\n    pageInfo
+      string: '{"query":"query Mirah__Graphql__Queries__PatientConditionQuery($first:
+        Int, $last: Int, $after: String, $before: String, $externalId: [String!])
+        {\n  patientConditions(first: $first, after: $after, before: $before, last:
+        $last, externalId: $externalId) {\n    nodes {\n      ...Mirah__Graphql__Fragments__PatientConditionFragment\n    }\n    pageInfo
         {\n      ...Mirah__Graphql__Fragments__PageInfoFragment\n    }\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__OrganizationFragment on Organization {\n  id\n  externalId\n  name\n  identifier
-        {\n    value\n  }\n  partOf {\n    id\n    externalId\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__PageInfoFragment on PageInfo {\n  hasNextPage\n  hasPreviousPage\n  startCursor\n  endCursor\n}","variables":{"first":100},"operationName":"Mirah__Graphql__Queries__OrganizationQuery"}'
+        Mirah__Graphql__Fragments__PatientConditionFragment on PatientCondition {\n  id\n  externalId\n  patient
+        {\n    id\n    externalId\n  }\n  diagnosticCode {\n    id\n    externalId\n  }\n  identifier
+        {\n    value\n  }\n  onsetDate\n  abatementDate\n  status\n}\n\nfragment Mirah__Graphql__Fragments__PageInfoFragment
+        on PageInfo {\n  hasNextPage\n  hasPreviousPage\n  startCursor\n  endCursor\n}","variables":{"first":100},"operationName":"Mirah__Graphql__Queries__PatientConditionQuery"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -47,7 +47,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"7cf319eeb2fedd3cfe3a1284d498b42b"
+      - W/"e8710c66586dbd0e5300875588f45596"
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Security-Policy:
@@ -70,34 +70,31 @@ http_interactions:
         *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
         ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - 168d2939-f6fd-41c0-82b6-d366bceee5f3
+      - a6e59293-c48f-439a-b321-2dff2cc71cf1
       X-Runtime:
-      - '0.044243'
+      - '0.045572'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"organizations":{"nodes":[{"id":"79014023-efd1-46be-a9e9-97d8e63a81de","externalId":"acute","name":"Acute
-        Unit","identifier":[{"value":"acute"}],"partOf":{"id":"c39ae9df-76bb-400e-ae6a-7c1afc482eb2","externalId":"hospital"}},{"id":"c39ae9df-76bb-400e-ae6a-7c1afc482eb2","externalId":"hospital","name":"Test
-        Hospital","identifier":[{"value":"hospital"}],"partOf":null}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"Mg"}}}}'
-  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
+      string: '{"data":{"patientConditions":{"nodes":[{"id":"a2636f72-e2b2-4150-a147-1fcc1bf869f4","externalId":"ptcnd1","patient":{"id":"e93b239b-f818-41c0-93c4-00bc6627d08b","externalId":"aa"},"diagnosticCode":{"id":"c574792e-c2ed-489c-bd32-9927a796dcb2","externalId":"cnd1"},"identifier":[{"value":"ptcnd1"}],"onsetDate":"2020-06-14T08:00:00Z","abatementDate":"2022-06-14T08:00:00Z","status":"REMISSION"},{"id":"1fe4430f-2e87-4f08-8156-7df9517f6c8b","externalId":"ptcnd2","patient":{"id":"76e90899-183e-4cc6-a4a3-3ab0e758c575","externalId":"bb"},"diagnosticCode":{"id":"68672afc-4671-4c6b-96a5-2f69828b6acc","externalId":"cnd2"},"identifier":[{"value":"ptcnd2"}],"onsetDate":"2022-06-14T08:00:00Z","abatementDate":null,"status":"ACTIVE"}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"Mg"}}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:37 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
     body:
       encoding: UTF-8
-      string: '{"query":"query Mirah__Graphql__Queries__OrganizationQuery($first:
-        Int, $last: Int, $after: String, $before: String, $externalId: [String!],
-        $search: String) {\n  organizations(first: $first, after: $after, before:
-        $before, last: $last, externalId: $externalId, search: $search) {\n    nodes
-        {\n      ...Mirah__Graphql__Fragments__OrganizationFragment\n    }\n    pageInfo
+      string: '{"query":"query Mirah__Graphql__Queries__PatientConditionQuery($first:
+        Int, $last: Int, $after: String, $before: String, $externalId: [String!])
+        {\n  patientConditions(first: $first, after: $after, before: $before, last:
+        $last, externalId: $externalId) {\n    nodes {\n      ...Mirah__Graphql__Fragments__PatientConditionFragment\n    }\n    pageInfo
         {\n      ...Mirah__Graphql__Fragments__PageInfoFragment\n    }\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__OrganizationFragment on Organization {\n  id\n  externalId\n  name\n  identifier
-        {\n    value\n  }\n  partOf {\n    id\n    externalId\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__PageInfoFragment on PageInfo {\n  hasNextPage\n  hasPreviousPage\n  startCursor\n  endCursor\n}","variables":{"externalId":["hospital"],"search":"Test
-        Hospital","first":100},"operationName":"Mirah__Graphql__Queries__OrganizationQuery"}'
+        Mirah__Graphql__Fragments__PatientConditionFragment on PatientCondition {\n  id\n  externalId\n  patient
+        {\n    id\n    externalId\n  }\n  diagnosticCode {\n    id\n    externalId\n  }\n  identifier
+        {\n    value\n  }\n  onsetDate\n  abatementDate\n  status\n}\n\nfragment Mirah__Graphql__Fragments__PageInfoFragment
+        on PageInfo {\n  hasNextPage\n  hasPreviousPage\n  startCursor\n  endCursor\n}","variables":{"externalId":["ptcnd1"],"first":100},"operationName":"Mirah__Graphql__Queries__PatientConditionQuery"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -131,7 +128,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f742020a2cfd97bda2e345d5448c649b"
+      - W/"e32c8954228cfcb96f9f794d918836aa"
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Security-Policy:
@@ -154,27 +151,27 @@ http_interactions:
         *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
         ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - ab049d9b-006e-47d7-8690-a1c3777ad5e8
+      - 9c78fa31-ddd6-48b6-83a9-cb89d3c363ca
       X-Runtime:
-      - '0.048184'
+      - '0.030980'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"organizations":{"nodes":[{"id":"c39ae9df-76bb-400e-ae6a-7c1afc482eb2","externalId":"hospital","name":"Test
-        Hospital","identifier":[{"value":"hospital"}],"partOf":null}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"MQ"}}}}'
-  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
+      string: '{"data":{"patientConditions":{"nodes":[{"id":"a2636f72-e2b2-4150-a147-1fcc1bf869f4","externalId":"ptcnd1","patient":{"id":"e93b239b-f818-41c0-93c4-00bc6627d08b","externalId":"aa"},"diagnosticCode":{"id":"c574792e-c2ed-489c-bd32-9927a796dcb2","externalId":"cnd1"},"identifier":[{"value":"ptcnd1"}],"onsetDate":"2020-06-14T08:00:00Z","abatementDate":"2022-06-14T08:00:00Z","status":"REMISSION"}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"MQ"}}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:37 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
     body:
       encoding: UTF-8
-      string: '{"query":"query Mirah__Graphql__Queries__OrganizationExternalIdQuery($externalId:
-        String!) {\n  organizationExternal(externalId: $externalId) {\n    ...Mirah__Graphql__Fragments__OrganizationFragment\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__OrganizationFragment on Organization {\n  id\n  externalId\n  name\n  identifier
-        {\n    value\n  }\n  partOf {\n    id\n    externalId\n  }\n}","variables":{"externalId":"hospital"},"operationName":"Mirah__Graphql__Queries__OrganizationExternalIdQuery"}'
+      string: '{"query":"query Mirah__Graphql__Queries__PatientConditionExternalIdQuery($externalId:
+        String!) {\n  patientConditionExternal(externalId: $externalId) {\n    ...Mirah__Graphql__Fragments__PatientConditionFragment\n  }\n}\n\nfragment
+        Mirah__Graphql__Fragments__PatientConditionFragment on PatientCondition {\n  id\n  externalId\n  patient
+        {\n    id\n    externalId\n  }\n  diagnosticCode {\n    id\n    externalId\n  }\n  identifier
+        {\n    value\n  }\n  onsetDate\n  abatementDate\n  status\n}","variables":{"externalId":"ptcnd1"},"operationName":"Mirah__Graphql__Queries__PatientConditionExternalIdQuery"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -208,7 +205,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"16c6529e73a6c61a832763089d90f747"
+      - W/"31d78b9408e5b7013747c8cee5213ed9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Security-Policy:
@@ -231,27 +228,27 @@ http_interactions:
         *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
         ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - 424931b9-2e4a-48cf-b9f5-d918ff85ad77
+      - 79985da9-869c-4aa3-9565-201ae45d22e2
       X-Runtime:
-      - '0.025502'
+      - '0.048451'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"organizationExternal":{"id":"c39ae9df-76bb-400e-ae6a-7c1afc482eb2","externalId":"hospital","name":"Test
-        Hospital","identifier":[{"value":"hospital"}],"partOf":null}}}'
-  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
+      string: '{"data":{"patientConditionExternal":{"id":"a2636f72-e2b2-4150-a147-1fcc1bf869f4","externalId":"ptcnd1","patient":{"id":"e93b239b-f818-41c0-93c4-00bc6627d08b","externalId":"aa"},"diagnosticCode":{"id":"c574792e-c2ed-489c-bd32-9927a796dcb2","externalId":"cnd1"},"identifier":[{"value":"ptcnd1"}],"onsetDate":"2020-06-14T08:00:00Z","abatementDate":"2022-06-14T08:00:00Z","status":"REMISSION"}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:37 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
     body:
       encoding: UTF-8
-      string: '{"query":"query Mirah__Graphql__Queries__OrganizationIdQuery($id: ID!)
-        {\n  organization(id: $id) {\n    ...Mirah__Graphql__Fragments__OrganizationFragment\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__OrganizationFragment on Organization {\n  id\n  externalId\n  name\n  identifier
-        {\n    value\n  }\n  partOf {\n    id\n    externalId\n  }\n}","variables":{"id":"c39ae9df-76bb-400e-ae6a-7c1afc482eb2"},"operationName":"Mirah__Graphql__Queries__OrganizationIdQuery"}'
+      string: '{"query":"query Mirah__Graphql__Queries__PatientConditionIdQuery($id:
+        ID!) {\n  patientCondition(id: $id) {\n    ...Mirah__Graphql__Fragments__PatientConditionFragment\n  }\n}\n\nfragment
+        Mirah__Graphql__Fragments__PatientConditionFragment on PatientCondition {\n  id\n  externalId\n  patient
+        {\n    id\n    externalId\n  }\n  diagnosticCode {\n    id\n    externalId\n  }\n  identifier
+        {\n    value\n  }\n  onsetDate\n  abatementDate\n  status\n}","variables":{"id":"a2636f72-e2b2-4150-a147-1fcc1bf869f4"},"operationName":"Mirah__Graphql__Queries__PatientConditionIdQuery"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -285,7 +282,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"afb04fd480338c26c79f31292dc680e4"
+      - W/"48911970d599fc5e98601ddfa4cf3c22"
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Security-Policy:
@@ -308,30 +305,29 @@ http_interactions:
         *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
         ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - 52dc9fa6-5c2c-4ac8-b84a-7c0c414f08e0
+      - 525ec687-5503-4163-9e2b-c009e86f4b16
       X-Runtime:
-      - '0.038168'
+      - '0.030380'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"organization":{"id":"c39ae9df-76bb-400e-ae6a-7c1afc482eb2","externalId":"hospital","name":"Test
-        Hospital","identifier":[{"value":"hospital"}],"partOf":null}}}'
-  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
+      string: '{"data":{"patientCondition":{"id":"a2636f72-e2b2-4150-a147-1fcc1bf869f4","externalId":"ptcnd1","patient":{"id":"e93b239b-f818-41c0-93c4-00bc6627d08b","externalId":"aa"},"diagnosticCode":{"id":"c574792e-c2ed-489c-bd32-9927a796dcb2","externalId":"cnd1"},"identifier":[{"value":"ptcnd1"}],"onsetDate":"2020-06-14T08:00:00Z","abatementDate":"2022-06-14T08:00:00Z","status":"REMISSION"}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:37 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
     body:
       encoding: UTF-8
-      string: '{"query":"mutation Mirah__Graphql__Mutations__CreateOrUpdateOrganizationMutation($input:
-        CreateOrUpdateOrganizationInput!) {\n  createOrUpdateOrganization(input: $input)
-        {\n    status\n    errors {\n      path\n      message\n    }\n    result
-        {\n      ...Mirah__Graphql__Fragments__OrganizationFragment\n    }\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__OrganizationFragment on Organization {\n  id\n  externalId\n  name\n  identifier
-        {\n    value\n  }\n  partOf {\n    id\n    externalId\n  }\n}","variables":{"input":{"externalId":"outpatient","name":"Outpatient
-        Therapy","externalPartOfId":"hospital"}},"operationName":"Mirah__Graphql__Mutations__CreateOrUpdateOrganizationMutation"}'
+      string: '{"query":"mutation Mirah__Graphql__Mutations__CreateOrUpdatePatientConditionMutation($input:
+        CreateOrUpdatePatientConditionInput!) {\n  createOrUpdatePatientCondition(input:
+        $input) {\n    status\n    errors {\n      path\n      message\n    }\n    result
+        {\n      ...Mirah__Graphql__Fragments__PatientConditionFragment\n    }\n  }\n}\n\nfragment
+        Mirah__Graphql__Fragments__PatientConditionFragment on PatientCondition {\n  id\n  externalId\n  patient
+        {\n    id\n    externalId\n  }\n  diagnosticCode {\n    id\n    externalId\n  }\n  identifier
+        {\n    value\n  }\n  onsetDate\n  abatementDate\n  status\n}","variables":{"input":{"externalId":"ptcnd99","onsetDate":"2020-06-10T17:00:00+00:00","abatementDate":"2022-06-10T18:00:00+00:00","status":"REMISSION","externalPatientId":"bb","externalDiagnosticCodeId":"cnd1"}},"operationName":"Mirah__Graphql__Mutations__CreateOrUpdatePatientConditionMutation"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -365,7 +361,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"cc01770561b9677ab5d42980fcc54518"
+      - W/"678a6036dda24ffb81fdad42825e541c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Security-Policy:
@@ -388,16 +384,15 @@ http_interactions:
         *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
         ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - d7af5d24-85a8-4b5a-8483-9d20c5c494ed
+      - 7cfb4eaa-d49f-4239-9494-0bd2eeca49ae
       X-Runtime:
-      - '0.058398'
+      - '0.072298'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"createOrUpdateOrganization":{"status":"CREATED","errors":[],"result":{"id":"89fcc024-9232-484b-912f-07d3e1448893","externalId":"outpatient","name":"Outpatient
-        Therapy","identifier":[{"value":"outpatient"}],"partOf":{"id":"c39ae9df-76bb-400e-ae6a-7c1afc482eb2","externalId":"hospital"}}}}}'
-  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
+      string: '{"data":{"createOrUpdatePatientCondition":{"status":"CREATED","errors":[],"result":{"id":"220a7e7d-16d3-46a1-8bdc-9de8213890b8","externalId":"ptcnd99","patient":{"id":"76e90899-183e-4cc6-a4a3-3ab0e758c575","externalId":"bb"},"diagnosticCode":{"id":"c574792e-c2ed-489c-bd32-9927a796dcb2","externalId":"cnd1"},"identifier":[{"value":"ptcnd99"}],"onsetDate":"2020-06-10T17:00:00Z","abatementDate":"2022-06-10T18:00:00Z","status":"REMISSION"}}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:37 GMT
 recorded_with: VCR 6.1.0

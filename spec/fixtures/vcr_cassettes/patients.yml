@@ -10,250 +10,6 @@ http_interactions:
         String) {\n  patients(first: $first, after: $after, before: $before, last:
         $last, externalId: $externalId, search: $search) {\n    nodes {\n      ...Mirah__Graphql__Fragments__PatientFragment\n    }\n    pageInfo
         {\n      ...Mirah__Graphql__Fragments__PageInfoFragment\n    }\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__PatientFragment on Patient {\n  id\n  externalId\n  givenName\n  familyName\n  birthDate\n  gender\n  primaryLanguage\n  email\n  phoneNumber\n  managingOrganization
-        {\n    id\n    externalId\n  }\n  identifier {\n    value\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__PageInfoFragment on PageInfo {\n  hasNextPage\n  hasPreviousPage\n  startCursor\n  endCursor\n}","variables":{"first":100},"operationName":"Mirah__Graphql__Queries__PatientQuery"}'
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - application/json
-      User-Agent:
-      - Ruby
-      Content-Type:
-      - application/json
-      Api-User-Id:
-      - "<API_USER_ID>"
-      Api-Key:
-      - "<API_TOKEN>"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - ALLOWALL
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"f2316c64c4b44d3f79858d529e5545ed"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - e8d65e7a-56a3-4269-8e33-9866622a84b8
-      X-Runtime:
-      - '0.468163'
-      Vary:
-      - Accept-Encoding
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: '{"data":{"patients":{"nodes":[{"id":"5ef87567-64f0-4709-8f27-9be0d01e8f81","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","managingOrganization":null,"identifier":[{"value":"aa"}]},{"id":"c538ac95-f73d-45bb-b7d1-979427bf23b2","externalId":"bb","givenName":"Brian","familyName":"Blessed","birthDate":"1938-01-20","gender":"MALE","primaryLanguage":null,"email":"example+brian@mirah.com","phoneNumber":"555-555-5555","managingOrganization":null,"identifier":[{"value":"bb"}]},{"id":"abbbb814-542a-4503-8164-f36b597a39e3","externalId":"cc","givenName":"Charlotte","familyName":"Cutler","birthDate":"2001-07-02","gender":"FEMALE","primaryLanguage":null,"email":"example+charlotte@mirah.com","phoneNumber":"555-555-5555","managingOrganization":null,"identifier":[{"value":"cc"}]}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"Mw"}}}}'
-  recorded_at: Wed, 24 Jun 2020 18:07:20 GMT
-- request:
-    method: post
-    uri: http://localhost:3000/integration_api/graphql
-    body:
-      encoding: UTF-8
-      string: '{"query":"query Mirah__Graphql__Queries__PatientQuery($first: Int,
-        $last: Int, $after: String, $before: String, $externalId: [String!], $search:
-        String) {\n  patients(first: $first, after: $after, before: $before, last:
-        $last, externalId: $externalId, search: $search) {\n    nodes {\n      ...Mirah__Graphql__Fragments__PatientFragment\n    }\n    pageInfo
-        {\n      ...Mirah__Graphql__Fragments__PageInfoFragment\n    }\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__PatientFragment on Patient {\n  id\n  externalId\n  givenName\n  familyName\n  birthDate\n  gender\n  primaryLanguage\n  email\n  phoneNumber\n  managingOrganization
-        {\n    id\n    externalId\n  }\n  identifier {\n    value\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__PageInfoFragment on PageInfo {\n  hasNextPage\n  hasPreviousPage\n  startCursor\n  endCursor\n}","variables":{"externalId":["aa"],"search":"Andrew","first":100},"operationName":"Mirah__Graphql__Queries__PatientQuery"}'
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - application/json
-      User-Agent:
-      - Ruby
-      Content-Type:
-      - application/json
-      Api-User-Id:
-      - "<API_USER_ID>"
-      Api-Key:
-      - "<API_TOKEN>"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - ALLOWALL
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"d97955c123a3391b81c7e11db44faa19"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - edc8dc3e-224c-4739-b5ea-a7e1217258f1
-      X-Runtime:
-      - '0.130034'
-      Vary:
-      - Accept-Encoding
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: '{"data":{"patients":{"nodes":[{"id":"5ef87567-64f0-4709-8f27-9be0d01e8f81","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","managingOrganization":null,"identifier":[{"value":"aa"}]}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"MQ"}}}}'
-  recorded_at: Wed, 24 Jun 2020 18:07:20 GMT
-- request:
-    method: post
-    uri: http://localhost:3000/integration_api/graphql
-    body:
-      encoding: UTF-8
-      string: '{"query":"query Mirah__Graphql__Queries__PatientExternalIdQuery($externalId:
-        String!) {\n  patientExternal(externalId: $externalId) {\n    ...Mirah__Graphql__Fragments__PatientFragment\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__PatientFragment on Patient {\n  id\n  externalId\n  givenName\n  familyName\n  birthDate\n  gender\n  primaryLanguage\n  email\n  phoneNumber\n  managingOrganization
-        {\n    id\n    externalId\n  }\n  identifier {\n    value\n  }\n}","variables":{"externalId":"aa"},"operationName":"Mirah__Graphql__Queries__PatientExternalIdQuery"}'
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - application/json
-      User-Agent:
-      - Ruby
-      Content-Type:
-      - application/json
-      Api-User-Id:
-      - "<API_USER_ID>"
-      Api-Key:
-      - "<API_TOKEN>"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - ALLOWALL
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"7dd3ceba6c18bd4e8909a5debd4bb0c6"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 2727ccc5-990a-44f1-b394-ab29884a0668
-      X-Runtime:
-      - '0.089188'
-      Vary:
-      - Accept-Encoding
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: '{"data":{"patientExternal":{"id":"5ef87567-64f0-4709-8f27-9be0d01e8f81","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","managingOrganization":null,"identifier":[{"value":"aa"}]}}}'
-  recorded_at: Wed, 24 Jun 2020 18:07:20 GMT
-- request:
-    method: post
-    uri: http://localhost:3000/integration_api/graphql
-    body:
-      encoding: UTF-8
-      string: '{"query":"query Mirah__Graphql__Queries__PatientIdQuery($id: ID!) {\n  patient(id:
-        $id) {\n    ...Mirah__Graphql__Fragments__PatientFragment\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__PatientFragment on Patient {\n  id\n  externalId\n  givenName\n  familyName\n  birthDate\n  gender\n  primaryLanguage\n  email\n  phoneNumber\n  managingOrganization
-        {\n    id\n    externalId\n  }\n  identifier {\n    value\n  }\n}","variables":{"id":"5ef87567-64f0-4709-8f27-9be0d01e8f81"},"operationName":"Mirah__Graphql__Queries__PatientIdQuery"}'
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - application/json
-      User-Agent:
-      - Ruby
-      Content-Type:
-      - application/json
-      Api-User-Id:
-      - "<API_USER_ID>"
-      Api-Key:
-      - "<API_TOKEN>"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - ALLOWALL
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"fbf0605b59fc74fe59a1026c5e6efbd8"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - df47de6b-3ad0-4426-b655-535ac659dd7c
-      X-Runtime:
-      - '0.113313'
-      Vary:
-      - Accept-Encoding
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: '{"data":{"patient":{"id":"5ef87567-64f0-4709-8f27-9be0d01e8f81","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","managingOrganization":null,"identifier":[{"value":"aa"}]}}}'
-  recorded_at: Wed, 24 Jun 2020 18:07:20 GMT
-- request:
-    method: post
-    uri: http://localhost:3000/integration_api/graphql
-    body:
-      encoding: UTF-8
-      string: '{"query":"mutation Mirah__Graphql__Mutations__CreateOrUpdatePatientMutation($input:
-        CreateOrUpdatePatientInput!) {\n  createOrUpdatePatient(input: $input) {\n    status\n    errors
-        {\n      path\n      message\n    }\n    result {\n      ...Mirah__Graphql__Fragments__PatientFragment\n    }\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__PatientFragment on Patient {\n  id\n  externalId\n  givenName\n  familyName\n  birthDate\n  gender\n  primaryLanguage\n  email\n  phoneNumber\n  managingOrganization
-        {\n    id\n    externalId\n  }\n  identifier {\n    value\n  }\n}","variables":{"input":{"externalId":"tt","givenName":"Tim","familyName":"Thomas","birthDate":"2000-01-01","gender":"MALE","email":"tim@mirah.com","phoneNumber":"555-555-5555","externalManagingOrganizationId":"hospital"}},"operationName":"Mirah__Graphql__Mutations__CreateOrUpdatePatientMutation"}'
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - application/json
-      User-Agent:
-      - Ruby
-      Content-Type:
-      - application/json
-      Api-User-Id:
-      - "<API_USER_ID>"
-      Api-Key:
-      - "<API_TOKEN>"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Frame-Options:
-      - ALLOWALL
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"8897ff300a6a1c27639c18bfaced2f07"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - e6f18882-e9b2-43fe-ac13-3388843043aa
-      X-Runtime:
-      - '0.542758'
-      Vary:
-      - Accept-Encoding
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: '{"data":{"createOrUpdatePatient":{"status":"CREATED","errors":[],"result":{"id":"e653bcaf-5c3f-4ad1-aff5-0e5f6a1ab09d","externalId":"tt","givenName":"Tim","familyName":"Thomas","birthDate":"2000-01-01","gender":"MALE","primaryLanguage":null,"email":"tim@mirah.com","phoneNumber":"555-555-5555","managingOrganization":{"id":"1976332a-4cff-4857-bda1-50f0ab05e0a1","externalId":"hospital"},"identifier":[{"value":"tt"}]}}}}'
-  recorded_at: Wed, 24 Jun 2020 18:07:21 GMT
-- request:
-    method: post
-    uri: http://localhost:3000/integration_api/graphql
-    body:
-      encoding: UTF-8
-      string: '{"query":"query Mirah__Graphql__Queries__PatientQuery($first: Int,
-        $last: Int, $after: String, $before: String, $externalId: [String!], $search:
-        String) {\n  patients(first: $first, after: $after, before: $before, last:
-        $last, externalId: $externalId, search: $search) {\n    nodes {\n      ...Mirah__Graphql__Fragments__PatientFragment\n    }\n    pageInfo
-        {\n      ...Mirah__Graphql__Fragments__PageInfoFragment\n    }\n  }\n}\n\nfragment
         Mirah__Graphql__Fragments__PatientFragment on Patient {\n  id\n  externalId\n  givenName\n  familyName\n  birthDate\n  gender\n  primaryLanguage\n  email\n  phoneNumber\n  timezone\n  managingOrganization
         {\n    id\n    externalId\n  }\n  identifier {\n    value\n  }\n}\n\nfragment
         Mirah__Graphql__Fragments__PageInfoFragment on PageInfo {\n  hasNextPage\n  hasPreviousPage\n  startCursor\n  endCursor\n}","variables":{"first":100},"operationName":"Mirah__Graphql__Queries__PatientQuery"}'
@@ -277,24 +33,53 @@ http_interactions:
     headers:
       X-Frame-Options:
       - ALLOWALL
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"2a5f61cf23f31009ea21bc7e225cb244"
+      - W/"7c01cdf57504aa1c396bda1e0717c099"
       Cache-Control:
       - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'default-src ''self''; script-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        www.google-analytics.com ''unsafe-inline'' https://www.gstatic.com ''unsafe-eval''
+        https://beacon-v2.helpscout.net https://d12wqas9hcki3z.cloudfront.net https://d33v4339jhl8k0.cloudfront.net
+        https://cdn.mxpnl.com https://cdn4.mxpnl.com blob:; font-src ''self'' *.assets.mirah.dev
+        *.assets.mirah.com data: blob https://fonts.gstatic.com https://beacon-v2.helpscout.net;
+        connect-src ''self'' *.assets.mirah.dev *.assets.mirah.com www.google-analytics.com
+        https://*.nr-data.net https://beaconapi.helpscout.net https://chatapi.helpscout.net
+        https://d3hb14vkzrxvla.cloudfront.net wss://*.pusher.com *.sumologic.com *.mixpanel.com
+        cdn.mxpnl.com *.ingest.sentry.io; img-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        data: ''unsafe-inline'' https://*.nr-data.net www.google-analytics.com https://*.gravatar.com
+        s3.amazonaws.com https://beacon-v2.helpscout.net https://d33v4339jhl8k0.cloudfront.net
+        www.gstatic.com; style-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        ''unsafe-inline'' https://fonts.googleapis.com https://beacon-v2.helpscout.net
+        https://www.gstatic.com; media-src ''self'' https://beacon-v2.helpscout.net;
+        base-uri https://docs.helpscout.net; frame-src https://beacon-v2.helpscout.net;
+        object-src ''self'' blob: https://beacon-v2.helpscout.net; manifest-src ''self''
+        *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
+        ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - 0144baef-72ba-462b-a087-4bc9f9c59152
+      - 27005a10-732b-404c-a808-630d1e636c74
       X-Runtime:
-      - '0.040349'
+      - '0.027995'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"patients":{"nodes":[{"id":"4656106a-bc8b-43c2-8b99-db20bffb8f3c","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","timezone":null,"managingOrganization":null,"identifier":[{"value":"aa"}]},{"id":"abbc8101-89e7-432a-b992-4795d767714c","externalId":"bb","givenName":"Brian","familyName":"Blessed","birthDate":"1938-01-20","gender":"MALE","primaryLanguage":null,"email":"example+brian@mirah.com","phoneNumber":"555-555-5555","timezone":null,"managingOrganization":null,"identifier":[{"value":"bb"}]},{"id":"a6c81c8a-0c1d-44b0-930c-5214fc3ea194","externalId":"cc","givenName":"Charlotte","familyName":"Cutler","birthDate":"2001-07-02","gender":"FEMALE","primaryLanguage":null,"email":"example+charlotte@mirah.com","phoneNumber":"555-555-5555","timezone":null,"managingOrganization":null,"identifier":[{"value":"cc"}]}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"Mw"}}}}'
-  recorded_at: Wed, 23 Sep 2020 20:16:02 GMT
+      string: '{"data":{"patients":{"nodes":[{"id":"e93b239b-f818-41c0-93c4-00bc6627d08b","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"+15555555555","timezone":null,"managingOrganization":null,"identifier":[{"value":"aa"}]},{"id":"76e90899-183e-4cc6-a4a3-3ab0e758c575","externalId":"bb","givenName":"Brian","familyName":"Blessed","birthDate":"1938-01-20","gender":"MALE","primaryLanguage":null,"email":"example+brian@mirah.com","phoneNumber":"+15555555555","timezone":null,"managingOrganization":null,"identifier":[{"value":"bb"}]},{"id":"dd8dd6b2-4751-4dda-a7b6-ff3c49976eeb","externalId":"cc","givenName":"Charlotte","familyName":"Cutler","birthDate":"2001-07-02","gender":"FEMALE","primaryLanguage":null,"email":"example+charlotte@mirah.com","phoneNumber":"+15555555555","timezone":null,"managingOrganization":null,"identifier":[{"value":"cc"}]}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"Mw"}}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -328,24 +113,53 @@ http_interactions:
     headers:
       X-Frame-Options:
       - ALLOWALL
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"eecae9450bf38988b0eae92aa5be8596"
+      - W/"21a55cd97ea6823b46ab4edd54527d10"
       Cache-Control:
       - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'default-src ''self''; script-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        www.google-analytics.com ''unsafe-inline'' https://www.gstatic.com ''unsafe-eval''
+        https://beacon-v2.helpscout.net https://d12wqas9hcki3z.cloudfront.net https://d33v4339jhl8k0.cloudfront.net
+        https://cdn.mxpnl.com https://cdn4.mxpnl.com blob:; font-src ''self'' *.assets.mirah.dev
+        *.assets.mirah.com data: blob https://fonts.gstatic.com https://beacon-v2.helpscout.net;
+        connect-src ''self'' *.assets.mirah.dev *.assets.mirah.com www.google-analytics.com
+        https://*.nr-data.net https://beaconapi.helpscout.net https://chatapi.helpscout.net
+        https://d3hb14vkzrxvla.cloudfront.net wss://*.pusher.com *.sumologic.com *.mixpanel.com
+        cdn.mxpnl.com *.ingest.sentry.io; img-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        data: ''unsafe-inline'' https://*.nr-data.net www.google-analytics.com https://*.gravatar.com
+        s3.amazonaws.com https://beacon-v2.helpscout.net https://d33v4339jhl8k0.cloudfront.net
+        www.gstatic.com; style-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        ''unsafe-inline'' https://fonts.googleapis.com https://beacon-v2.helpscout.net
+        https://www.gstatic.com; media-src ''self'' https://beacon-v2.helpscout.net;
+        base-uri https://docs.helpscout.net; frame-src https://beacon-v2.helpscout.net;
+        object-src ''self'' blob: https://beacon-v2.helpscout.net; manifest-src ''self''
+        *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
+        ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - 17d68810-d8ed-4228-8a42-f98e305b4c91
+      - c7438052-f5c2-4599-bdb1-0539d66fa6cc
       X-Runtime:
-      - '0.040866'
+      - '0.030715'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"patients":{"nodes":[{"id":"4656106a-bc8b-43c2-8b99-db20bffb8f3c","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","timezone":null,"managingOrganization":null,"identifier":[{"value":"aa"}]}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"MQ"}}}}'
-  recorded_at: Wed, 23 Sep 2020 20:16:02 GMT
+      string: '{"data":{"patients":{"nodes":[{"id":"e93b239b-f818-41c0-93c4-00bc6627d08b","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"+15555555555","timezone":null,"managingOrganization":null,"identifier":[{"value":"aa"}]}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"MQ"}}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -375,24 +189,53 @@ http_interactions:
     headers:
       X-Frame-Options:
       - ALLOWALL
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f4bb8be42592b08af9b66f333ec2098b"
+      - W/"5cd5c26517ea4bb3baffbfcc3f67725f"
       Cache-Control:
       - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'default-src ''self''; script-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        www.google-analytics.com ''unsafe-inline'' https://www.gstatic.com ''unsafe-eval''
+        https://beacon-v2.helpscout.net https://d12wqas9hcki3z.cloudfront.net https://d33v4339jhl8k0.cloudfront.net
+        https://cdn.mxpnl.com https://cdn4.mxpnl.com blob:; font-src ''self'' *.assets.mirah.dev
+        *.assets.mirah.com data: blob https://fonts.gstatic.com https://beacon-v2.helpscout.net;
+        connect-src ''self'' *.assets.mirah.dev *.assets.mirah.com www.google-analytics.com
+        https://*.nr-data.net https://beaconapi.helpscout.net https://chatapi.helpscout.net
+        https://d3hb14vkzrxvla.cloudfront.net wss://*.pusher.com *.sumologic.com *.mixpanel.com
+        cdn.mxpnl.com *.ingest.sentry.io; img-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        data: ''unsafe-inline'' https://*.nr-data.net www.google-analytics.com https://*.gravatar.com
+        s3.amazonaws.com https://beacon-v2.helpscout.net https://d33v4339jhl8k0.cloudfront.net
+        www.gstatic.com; style-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        ''unsafe-inline'' https://fonts.googleapis.com https://beacon-v2.helpscout.net
+        https://www.gstatic.com; media-src ''self'' https://beacon-v2.helpscout.net;
+        base-uri https://docs.helpscout.net; frame-src https://beacon-v2.helpscout.net;
+        object-src ''self'' blob: https://beacon-v2.helpscout.net; manifest-src ''self''
+        *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
+        ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - e23650bf-dfc0-47e3-b700-62d4f601d948
+      - 2024a4f8-7227-459a-8be6-7f79869e59ce
       X-Runtime:
-      - '0.035917'
+      - '0.029746'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"patientExternal":{"id":"4656106a-bc8b-43c2-8b99-db20bffb8f3c","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","timezone":null,"managingOrganization":null,"identifier":[{"value":"aa"}]}}}'
-  recorded_at: Wed, 23 Sep 2020 20:16:02 GMT
+      string: '{"data":{"patientExternal":{"id":"e93b239b-f818-41c0-93c4-00bc6627d08b","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"+15555555555","timezone":null,"managingOrganization":null,"identifier":[{"value":"aa"}]}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -401,7 +244,7 @@ http_interactions:
       string: '{"query":"query Mirah__Graphql__Queries__PatientIdQuery($id: ID!) {\n  patient(id:
         $id) {\n    ...Mirah__Graphql__Fragments__PatientFragment\n  }\n}\n\nfragment
         Mirah__Graphql__Fragments__PatientFragment on Patient {\n  id\n  externalId\n  givenName\n  familyName\n  birthDate\n  gender\n  primaryLanguage\n  email\n  phoneNumber\n  timezone\n  managingOrganization
-        {\n    id\n    externalId\n  }\n  identifier {\n    value\n  }\n}","variables":{"id":"4656106a-bc8b-43c2-8b99-db20bffb8f3c"},"operationName":"Mirah__Graphql__Queries__PatientIdQuery"}'
+        {\n    id\n    externalId\n  }\n  identifier {\n    value\n  }\n}","variables":{"id":"e93b239b-f818-41c0-93c4-00bc6627d08b"},"operationName":"Mirah__Graphql__Queries__PatientIdQuery"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -422,24 +265,53 @@ http_interactions:
     headers:
       X-Frame-Options:
       - ALLOWALL
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"550817f7192187b8f7198f7aa1330d7c"
+      - W/"926e28dd49a5c9bffd3cdba613db329f"
       Cache-Control:
       - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'default-src ''self''; script-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        www.google-analytics.com ''unsafe-inline'' https://www.gstatic.com ''unsafe-eval''
+        https://beacon-v2.helpscout.net https://d12wqas9hcki3z.cloudfront.net https://d33v4339jhl8k0.cloudfront.net
+        https://cdn.mxpnl.com https://cdn4.mxpnl.com blob:; font-src ''self'' *.assets.mirah.dev
+        *.assets.mirah.com data: blob https://fonts.gstatic.com https://beacon-v2.helpscout.net;
+        connect-src ''self'' *.assets.mirah.dev *.assets.mirah.com www.google-analytics.com
+        https://*.nr-data.net https://beaconapi.helpscout.net https://chatapi.helpscout.net
+        https://d3hb14vkzrxvla.cloudfront.net wss://*.pusher.com *.sumologic.com *.mixpanel.com
+        cdn.mxpnl.com *.ingest.sentry.io; img-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        data: ''unsafe-inline'' https://*.nr-data.net www.google-analytics.com https://*.gravatar.com
+        s3.amazonaws.com https://beacon-v2.helpscout.net https://d33v4339jhl8k0.cloudfront.net
+        www.gstatic.com; style-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        ''unsafe-inline'' https://fonts.googleapis.com https://beacon-v2.helpscout.net
+        https://www.gstatic.com; media-src ''self'' https://beacon-v2.helpscout.net;
+        base-uri https://docs.helpscout.net; frame-src https://beacon-v2.helpscout.net;
+        object-src ''self'' blob: https://beacon-v2.helpscout.net; manifest-src ''self''
+        *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
+        ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - e85177cf-14ca-4414-9076-7c2a7e63ad6f
+      - 5268016d-9440-4407-b1e7-b77687c8e9c8
       X-Runtime:
-      - '0.033743'
+      - '0.021281'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"patient":{"id":"4656106a-bc8b-43c2-8b99-db20bffb8f3c","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"555-555-5555","timezone":null,"managingOrganization":null,"identifier":[{"value":"aa"}]}}}'
-  recorded_at: Wed, 23 Sep 2020 20:16:02 GMT
+      string: '{"data":{"patient":{"id":"e93b239b-f818-41c0-93c4-00bc6627d08b","externalId":"aa","givenName":"Andrew","familyName":"Adams","birthDate":"1968-06-25","gender":"MALE","primaryLanguage":null,"email":"example+andrew@mirah.com","phoneNumber":"+15555555555","timezone":null,"managingOrganization":null,"identifier":[{"value":"aa"}]}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
@@ -449,7 +321,7 @@ http_interactions:
         CreateOrUpdatePatientInput!) {\n  createOrUpdatePatient(input: $input) {\n    status\n    errors
         {\n      path\n      message\n    }\n    result {\n      ...Mirah__Graphql__Fragments__PatientFragment\n    }\n  }\n}\n\nfragment
         Mirah__Graphql__Fragments__PatientFragment on Patient {\n  id\n  externalId\n  givenName\n  familyName\n  birthDate\n  gender\n  primaryLanguage\n  email\n  phoneNumber\n  timezone\n  managingOrganization
-        {\n    id\n    externalId\n  }\n  identifier {\n    value\n  }\n}","variables":{"input":{"externalId":"tt","givenName":"Tim","familyName":"Thomas","birthDate":"2000-01-01","gender":"MALE","email":"tim@mirah.com","phoneNumber":"555-555-5555","timezone":"America/Los_Angeles","externalManagingOrganizationId":"hospital"}},"operationName":"Mirah__Graphql__Mutations__CreateOrUpdatePatientMutation"}'
+        {\n    id\n    externalId\n  }\n  identifier {\n    value\n  }\n}","variables":{"input":{"externalId":"tt","givenName":"Tim","familyName":"Thomas","birthDate":"2000-01-01","gender":"MALE","email":"tim@mirah.com","phoneNumber":"+15555555555","timezone":"America/Los_Angeles","externalManagingOrganizationId":"hospital"}},"operationName":"Mirah__Graphql__Mutations__CreateOrUpdatePatientMutation"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -470,22 +342,51 @@ http_interactions:
     headers:
       X-Frame-Options:
       - ALLOWALL
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"14f5791f622fba2dc4cf1f8b30ffd7c8"
+      - W/"2c13866b0eac30424d58c51cffe299f3"
       Cache-Control:
       - max-age=0, private, must-revalidate
+      Content-Security-Policy:
+      - 'default-src ''self''; script-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        www.google-analytics.com ''unsafe-inline'' https://www.gstatic.com ''unsafe-eval''
+        https://beacon-v2.helpscout.net https://d12wqas9hcki3z.cloudfront.net https://d33v4339jhl8k0.cloudfront.net
+        https://cdn.mxpnl.com https://cdn4.mxpnl.com blob:; font-src ''self'' *.assets.mirah.dev
+        *.assets.mirah.com data: blob https://fonts.gstatic.com https://beacon-v2.helpscout.net;
+        connect-src ''self'' *.assets.mirah.dev *.assets.mirah.com www.google-analytics.com
+        https://*.nr-data.net https://beaconapi.helpscout.net https://chatapi.helpscout.net
+        https://d3hb14vkzrxvla.cloudfront.net wss://*.pusher.com *.sumologic.com *.mixpanel.com
+        cdn.mxpnl.com *.ingest.sentry.io; img-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        data: ''unsafe-inline'' https://*.nr-data.net www.google-analytics.com https://*.gravatar.com
+        s3.amazonaws.com https://beacon-v2.helpscout.net https://d33v4339jhl8k0.cloudfront.net
+        www.gstatic.com; style-src ''self'' *.assets.mirah.dev *.assets.mirah.com
+        ''unsafe-inline'' https://fonts.googleapis.com https://beacon-v2.helpscout.net
+        https://www.gstatic.com; media-src ''self'' https://beacon-v2.helpscout.net;
+        base-uri https://docs.helpscout.net; frame-src https://beacon-v2.helpscout.net;
+        object-src ''self'' blob: https://beacon-v2.helpscout.net; manifest-src ''self''
+        *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
+        ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - e681562d-1d75-488b-85ef-f2078822c199
+      - 478d64b2-163f-49c4-9a71-c4795f3f6a0e
       X-Runtime:
-      - '0.111311'
+      - '0.078996'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"createOrUpdatePatient":{"status":"CREATED","errors":[],"result":{"id":"77b48a85-b811-4f57-8a04-90f8cc2790f8","externalId":"tt","givenName":"Tim","familyName":"Thomas","birthDate":"2000-01-01","gender":"MALE","primaryLanguage":null,"email":"tim@mirah.com","phoneNumber":"555-555-5555","timezone":"America/Los_Angeles","managingOrganization":{"id":"7a0d147e-5a0d-441e-a574-02395000ad80","externalId":"hospital"},"identifier":[{"value":"tt"}]}}}}'
-  recorded_at: Wed, 23 Sep 2020 20:16:02 GMT
-recorded_with: VCR 6.0.0
+      string: '{"data":{"createOrUpdatePatient":{"status":"CREATED","errors":[],"result":{"id":"cac838fa-bb2f-4904-9368-0d22ad13fe79","externalId":"tt","givenName":"Tim","familyName":"Thomas","birthDate":"2000-01-01","gender":"MALE","primaryLanguage":null,"email":"tim@mirah.com","phoneNumber":"+15555555555","timezone":"America/Los_Angeles","managingOrganization":{"id":"c39ae9df-76bb-400e-ae6a-7c1afc482eb2","externalId":"hospital"},"identifier":[{"value":"tt"},{"value":"tt"}]}}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
+recorded_with: VCR 6.1.0

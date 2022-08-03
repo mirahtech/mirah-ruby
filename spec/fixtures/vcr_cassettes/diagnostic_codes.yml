@@ -5,15 +5,15 @@ http_interactions:
     uri: http://localhost:3000/integration_api/graphql
     body:
       encoding: UTF-8
-      string: '{"query":"query Mirah__Graphql__Queries__OrganizationQuery($first:
+      string: '{"query":"query Mirah__Graphql__Queries__DiagnosticCodeQuery($first:
         Int, $last: Int, $after: String, $before: String, $externalId: [String!],
-        $search: String) {\n  organizations(first: $first, after: $after, before:
+        $search: String) {\n  diagnosticCodes(first: $first, after: $after, before:
         $before, last: $last, externalId: $externalId, search: $search) {\n    nodes
-        {\n      ...Mirah__Graphql__Fragments__OrganizationFragment\n    }\n    pageInfo
+        {\n      ...Mirah__Graphql__Fragments__DiagnosticCodeFragment\n    }\n    pageInfo
         {\n      ...Mirah__Graphql__Fragments__PageInfoFragment\n    }\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__OrganizationFragment on Organization {\n  id\n  externalId\n  name\n  identifier
-        {\n    value\n  }\n  partOf {\n    id\n    externalId\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__PageInfoFragment on PageInfo {\n  hasNextPage\n  hasPreviousPage\n  startCursor\n  endCursor\n}","variables":{"first":100},"operationName":"Mirah__Graphql__Queries__OrganizationQuery"}'
+        Mirah__Graphql__Fragments__DiagnosticCodeFragment on DiagnosticCode {\n  id\n  externalId\n  name\n  code\n  identifier
+        {\n    value\n  }\n}\n\nfragment Mirah__Graphql__Fragments__PageInfoFragment
+        on PageInfo {\n  hasNextPage\n  hasPreviousPage\n  startCursor\n  endCursor\n}","variables":{"first":100},"operationName":"Mirah__Graphql__Queries__DiagnosticCodeQuery"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -47,7 +47,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"7cf319eeb2fedd3cfe3a1284d498b42b"
+      - W/"7481ad39b259066cea67d7da159bec40"
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Security-Policy:
@@ -70,34 +70,32 @@ http_interactions:
         *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
         ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - 168d2939-f6fd-41c0-82b6-d366bceee5f3
+      - 9ad872e5-8e94-4540-806f-b36a9ab246f8
       X-Runtime:
-      - '0.044243'
+      - '0.030153'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"organizations":{"nodes":[{"id":"79014023-efd1-46be-a9e9-97d8e63a81de","externalId":"acute","name":"Acute
-        Unit","identifier":[{"value":"acute"}],"partOf":{"id":"c39ae9df-76bb-400e-ae6a-7c1afc482eb2","externalId":"hospital"}},{"id":"c39ae9df-76bb-400e-ae6a-7c1afc482eb2","externalId":"hospital","name":"Test
-        Hospital","identifier":[{"value":"hospital"}],"partOf":null}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"Mg"}}}}'
-  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
+      string: '{"data":{"diagnosticCodes":{"nodes":[{"id":"c574792e-c2ed-489c-bd32-9927a796dcb2","externalId":"cnd1","name":"Major
+        Depressive Disorder","code":"F320","identifier":[{"value":"cnd1"}]},{"id":"68672afc-4671-4c6b-96a5-2f69828b6acc","externalId":"cnd2","name":"OCD","code":"F32","identifier":[{"value":"cnd2"}]}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"Mg"}}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:37 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
     body:
       encoding: UTF-8
-      string: '{"query":"query Mirah__Graphql__Queries__OrganizationQuery($first:
+      string: '{"query":"query Mirah__Graphql__Queries__DiagnosticCodeQuery($first:
         Int, $last: Int, $after: String, $before: String, $externalId: [String!],
-        $search: String) {\n  organizations(first: $first, after: $after, before:
+        $search: String) {\n  diagnosticCodes(first: $first, after: $after, before:
         $before, last: $last, externalId: $externalId, search: $search) {\n    nodes
-        {\n      ...Mirah__Graphql__Fragments__OrganizationFragment\n    }\n    pageInfo
+        {\n      ...Mirah__Graphql__Fragments__DiagnosticCodeFragment\n    }\n    pageInfo
         {\n      ...Mirah__Graphql__Fragments__PageInfoFragment\n    }\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__OrganizationFragment on Organization {\n  id\n  externalId\n  name\n  identifier
-        {\n    value\n  }\n  partOf {\n    id\n    externalId\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__PageInfoFragment on PageInfo {\n  hasNextPage\n  hasPreviousPage\n  startCursor\n  endCursor\n}","variables":{"externalId":["hospital"],"search":"Test
-        Hospital","first":100},"operationName":"Mirah__Graphql__Queries__OrganizationQuery"}'
+        Mirah__Graphql__Fragments__DiagnosticCodeFragment on DiagnosticCode {\n  id\n  externalId\n  name\n  code\n  identifier
+        {\n    value\n  }\n}\n\nfragment Mirah__Graphql__Fragments__PageInfoFragment
+        on PageInfo {\n  hasNextPage\n  hasPreviousPage\n  startCursor\n  endCursor\n}","variables":{"externalId":["cnd1"],"first":100},"operationName":"Mirah__Graphql__Queries__DiagnosticCodeQuery"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -131,7 +129,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f742020a2cfd97bda2e345d5448c649b"
+      - W/"b96c0ba2ec8741dbde9bedcff46a6cc6"
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Security-Policy:
@@ -154,27 +152,27 @@ http_interactions:
         *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
         ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - ab049d9b-006e-47d7-8690-a1c3777ad5e8
+      - 04c0f3c7-8515-4c18-8c0a-4df3580489fd
       X-Runtime:
-      - '0.048184'
+      - '0.043809'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"organizations":{"nodes":[{"id":"c39ae9df-76bb-400e-ae6a-7c1afc482eb2","externalId":"hospital","name":"Test
-        Hospital","identifier":[{"value":"hospital"}],"partOf":null}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"MQ"}}}}'
-  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
+      string: '{"data":{"diagnosticCodes":{"nodes":[{"id":"c574792e-c2ed-489c-bd32-9927a796dcb2","externalId":"cnd1","name":"Major
+        Depressive Disorder","code":"F320","identifier":[{"value":"cnd1"}]}],"pageInfo":{"hasNextPage":false,"hasPreviousPage":false,"startCursor":"MQ","endCursor":"MQ"}}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:37 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
     body:
       encoding: UTF-8
-      string: '{"query":"query Mirah__Graphql__Queries__OrganizationExternalIdQuery($externalId:
-        String!) {\n  organizationExternal(externalId: $externalId) {\n    ...Mirah__Graphql__Fragments__OrganizationFragment\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__OrganizationFragment on Organization {\n  id\n  externalId\n  name\n  identifier
-        {\n    value\n  }\n  partOf {\n    id\n    externalId\n  }\n}","variables":{"externalId":"hospital"},"operationName":"Mirah__Graphql__Queries__OrganizationExternalIdQuery"}'
+      string: '{"query":"query Mirah__Graphql__Queries__DiagnosticCodeExternalIdQuery($externalId:
+        String!) {\n  diagnosticCodeExternal(externalId: $externalId) {\n    ...Mirah__Graphql__Fragments__DiagnosticCodeFragment\n  }\n}\n\nfragment
+        Mirah__Graphql__Fragments__DiagnosticCodeFragment on DiagnosticCode {\n  id\n  externalId\n  name\n  code\n  identifier
+        {\n    value\n  }\n}","variables":{"externalId":"cnd1"},"operationName":"Mirah__Graphql__Queries__DiagnosticCodeExternalIdQuery"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -208,7 +206,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"16c6529e73a6c61a832763089d90f747"
+      - W/"a682c8a235db8e51ae40bd356da0742a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Security-Policy:
@@ -231,27 +229,27 @@ http_interactions:
         *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
         ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - 424931b9-2e4a-48cf-b9f5-d918ff85ad77
+      - 40c2df21-e993-4832-a060-6fd684fb83fe
       X-Runtime:
-      - '0.025502'
+      - '0.033345'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"organizationExternal":{"id":"c39ae9df-76bb-400e-ae6a-7c1afc482eb2","externalId":"hospital","name":"Test
-        Hospital","identifier":[{"value":"hospital"}],"partOf":null}}}'
-  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
+      string: '{"data":{"diagnosticCodeExternal":{"id":"c574792e-c2ed-489c-bd32-9927a796dcb2","externalId":"cnd1","name":"Major
+        Depressive Disorder","code":"F320","identifier":[{"value":"cnd1"}]}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:37 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
     body:
       encoding: UTF-8
-      string: '{"query":"query Mirah__Graphql__Queries__OrganizationIdQuery($id: ID!)
-        {\n  organization(id: $id) {\n    ...Mirah__Graphql__Fragments__OrganizationFragment\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__OrganizationFragment on Organization {\n  id\n  externalId\n  name\n  identifier
-        {\n    value\n  }\n  partOf {\n    id\n    externalId\n  }\n}","variables":{"id":"c39ae9df-76bb-400e-ae6a-7c1afc482eb2"},"operationName":"Mirah__Graphql__Queries__OrganizationIdQuery"}'
+      string: '{"query":"query Mirah__Graphql__Queries__DiagnosticCodeIdQuery($id:
+        ID!) {\n  diagnosticCode(id: $id) {\n    ...Mirah__Graphql__Fragments__DiagnosticCodeFragment\n  }\n}\n\nfragment
+        Mirah__Graphql__Fragments__DiagnosticCodeFragment on DiagnosticCode {\n  id\n  externalId\n  name\n  code\n  identifier
+        {\n    value\n  }\n}","variables":{"id":"c574792e-c2ed-489c-bd32-9927a796dcb2"},"operationName":"Mirah__Graphql__Queries__DiagnosticCodeIdQuery"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -285,7 +283,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"afb04fd480338c26c79f31292dc680e4"
+      - W/"5160263eefea983fe8c020895667a25d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Security-Policy:
@@ -308,30 +306,29 @@ http_interactions:
         *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
         ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - 52dc9fa6-5c2c-4ac8-b84a-7c0c414f08e0
+      - 8a3f92bb-b64d-4496-8b81-dc59d95fdc52
       X-Runtime:
-      - '0.038168'
+      - '0.024862'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"organization":{"id":"c39ae9df-76bb-400e-ae6a-7c1afc482eb2","externalId":"hospital","name":"Test
-        Hospital","identifier":[{"value":"hospital"}],"partOf":null}}}'
-  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
+      string: '{"data":{"diagnosticCode":{"id":"c574792e-c2ed-489c-bd32-9927a796dcb2","externalId":"cnd1","name":"Major
+        Depressive Disorder","code":"F320","identifier":[{"value":"cnd1"}]}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:37 GMT
 - request:
     method: post
     uri: http://localhost:3000/integration_api/graphql
     body:
       encoding: UTF-8
-      string: '{"query":"mutation Mirah__Graphql__Mutations__CreateOrUpdateOrganizationMutation($input:
-        CreateOrUpdateOrganizationInput!) {\n  createOrUpdateOrganization(input: $input)
-        {\n    status\n    errors {\n      path\n      message\n    }\n    result
-        {\n      ...Mirah__Graphql__Fragments__OrganizationFragment\n    }\n  }\n}\n\nfragment
-        Mirah__Graphql__Fragments__OrganizationFragment on Organization {\n  id\n  externalId\n  name\n  identifier
-        {\n    value\n  }\n  partOf {\n    id\n    externalId\n  }\n}","variables":{"input":{"externalId":"outpatient","name":"Outpatient
-        Therapy","externalPartOfId":"hospital"}},"operationName":"Mirah__Graphql__Mutations__CreateOrUpdateOrganizationMutation"}'
+      string: '{"query":"mutation Mirah__Graphql__Mutations__CreateOrUpdateDiagnosticCodeMutation($input:
+        CreateOrUpdateDiagnosticCodeInput!) {\n  createOrUpdateDiagnosticCode(input:
+        $input) {\n    status\n    errors {\n      path\n      message\n    }\n    result
+        {\n      ...Mirah__Graphql__Fragments__DiagnosticCodeFragment\n    }\n  }\n}\n\nfragment
+        Mirah__Graphql__Fragments__DiagnosticCodeFragment on DiagnosticCode {\n  id\n  externalId\n  name\n  code\n  identifier
+        {\n    value\n  }\n}","variables":{"input":{"externalId":"cnd99","name":"OCD","code":"F42"}},"operationName":"Mirah__Graphql__Mutations__CreateOrUpdateDiagnosticCodeMutation"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -365,7 +362,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"cc01770561b9677ab5d42980fcc54518"
+      - W/"b39c90fd3de252bee87b10c9cd095385"
       Cache-Control:
       - max-age=0, private, must-revalidate
       Content-Security-Policy:
@@ -388,16 +385,15 @@ http_interactions:
         *.assets.mirah.dev *.assets.mirah.com; worker-src ''self'' blob:; child-src
         ''self'' blob:; report-uri https://o376047.ingest.sentry.io/api/5198965/security/?sentry_key=1b07c93db31b460e948fefd498c18bf0&sentry_environment=development'
       X-Request-Id:
-      - d7af5d24-85a8-4b5a-8483-9d20c5c494ed
+      - dbebddd2-eb9e-479c-865f-50d0c9a491e4
       X-Runtime:
-      - '0.058398'
+      - '0.058063'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"createOrUpdateOrganization":{"status":"CREATED","errors":[],"result":{"id":"89fcc024-9232-484b-912f-07d3e1448893","externalId":"outpatient","name":"Outpatient
-        Therapy","identifier":[{"value":"outpatient"}],"partOf":{"id":"c39ae9df-76bb-400e-ae6a-7c1afc482eb2","externalId":"hospital"}}}}}'
-  recorded_at: Wed, 03 Aug 2022 02:31:36 GMT
+      string: '{"data":{"createOrUpdateDiagnosticCode":{"status":"CREATED","errors":[],"result":{"id":"3de463f5-a1d0-41ca-967c-112652ac7e41","externalId":"cnd99","name":"OCD","code":"F42","identifier":[{"value":"cnd99"}]}}}}'
+  recorded_at: Wed, 03 Aug 2022 02:31:37 GMT
 recorded_with: VCR 6.1.0
